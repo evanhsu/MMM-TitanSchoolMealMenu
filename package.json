@@ -1,0 +1,14 @@
+{
+  "name": "magic-mirror-module-titanschoolmealmenu",
+  "version": "0.1.0",
+  "description": "A module for the MagicMirror framework that retrieves a school meal menu from the Tital Schools API",
+  "main": "MMM-TitanSchoolMealMenu.js",
+  "scripts": {
+    "test": "echo \"Write some tests\""
+  },
+  "author": "evanhsu@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.3"
+  }
+}
