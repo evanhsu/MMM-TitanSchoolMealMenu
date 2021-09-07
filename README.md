@@ -2,6 +2,8 @@
 
 #### A module for the MagicMirror framework that retrieves a school meal menu from the Tital Schools API
 
+![Screenshot](./docs/screenshot.png)
+
 ## Usage
 
 Add this to your MagicMirror `config.js`:
