@@ -3270,9 +3270,15 @@ class TitanSchoolsClient {
           return {
             date: menuForThisDate.Date,
             breakfastOrLunch,
-            menu: menuForThisDate.RecipeCategories.map((recipeCategory) => {
-              return recipeCategory.Recipes.map((recipe) => recipe.RecipeName);
-            }).join(', '),
+            menu: menuForThisDate.RecipeCategories.filter(
+              (recipeCategory) => recipeCategory.CategoryName === 'Main Entree'
+            )
+              .map((recipeCategory) => {
+                return recipeCategory.Recipes.map(
+                  (recipe) => recipe.RecipeName
+                );
+              })
+              .join(', '),
           };
         }
       );

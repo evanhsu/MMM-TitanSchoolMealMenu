@@ -1,9 +1,9 @@
-.MMM-TitanSchoolMealMenu {
-  width: 50%;
+.day-label {
+  font-weight: 700;
 }
 
-.label {
-  font-weight: 700;
+.meal-description {
+  font-weight: 300;
 }
 
 ul {

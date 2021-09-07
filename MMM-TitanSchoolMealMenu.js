@@ -73,34 +73,38 @@ Module.register('MMM-TitanSchoolMealMenu', {
           return;
         }
 
-        const label = document.createElement('li');
-        label.innerHTML = dayMenu.label;
-        label.style = 'label';
-        meals.appendChild(label);
+        const dayLabel = document.createElement('li');
+        dayLabel.innerHTML = dayMenu.label;
+        dayLabel.className = 'day-label';
+        meals.appendChild(dayLabel);
 
-        const breakfastList = document.createElement('ul');
-        const breakfastLabel = document.createElement('li');
-        breakfastLabel.innerHTML = 'Breakfast';
-        breakfastList.appendChild(breakfastLabel);
-        label.appendChild(breakfastList);
+        // const breakfastList = document.createElement('ul');
+        // const breakfastLabel = document.createElement('li');
+        // breakfastLabel.innerHTML = 'Breakfast';
+        // breakfastList.appendChild(breakfastLabel);
+        // label.appendChild(breakfastList);
 
         const breakfastMenuList = document.createElement('ul');
         const breakfastMenuItems = document.createElement('li');
-        breakfastMenuItems.innerHTML = dayMenu.breakfast ?? 'none';
+        breakfastMenuItems.innerHTML = `Breakfast: ${
+          dayMenu.breakfast ?? 'none'
+        }`;
+        breakfastMenuList.className = 'meal-description';
         breakfastMenuList.appendChild(breakfastMenuItems);
-        breakfastLabel.appendChild(breakfastMenuList);
+        dayLabel.appendChild(breakfastMenuList);
 
-        const lunchList = document.createElement('ul');
-        const lunchLabel = document.createElement('li');
-        lunchLabel.innerHTML = 'Lunch';
-        lunchList.appendChild(lunchLabel);
-        label.appendChild(lunchList);
+        // const lunchList = document.createElement('ul');
+        // const lunchLabel = document.createElement('li');
+        // lunchLabel.innerHTML = 'Lunch';
+        // lunchList.appendChild(lunchLabel);
+        // dayLabel.appendChild(lunchList);
 
         const lunchMenuList = document.createElement('ul');
         const lunchMenuItems = document.createElement('li');
-        lunchMenuItems.innerHTML = dayMenu.breakfast ?? 'none';
+        lunchMenuItems.innerHTML = `Lunch: ${dayMenu.lunch ?? 'none'}`;
+        lunchMenuList.className = 'meal-description';
         lunchMenuList.appendChild(lunchMenuItems);
-        lunchLabel.appendChild(lunchMenuList);
+        dayLabel.appendChild(lunchMenuList);
       });
 
       wrapperDataNotification.appendChild(meals);
