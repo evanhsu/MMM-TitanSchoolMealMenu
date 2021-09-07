@@ -4,7 +4,7 @@ Module.register('MMM-TitanSchoolMealMenu', {
     updateIntervalMs: 60 * 60 * 1000, // milliseconds
     buildingId: '23125610-cbbc-eb11-a2cb-82fe13669c55',
     districtId: '93f76ff0-2eb7-eb11-a2c4-e816644282bd',
-    numberOfDaysToDisplay: 3,
+    numberOfDaysToDisplay: 5,
   },
 
   requiresVersion: '2.1.0', // Required version of MagicMirror
