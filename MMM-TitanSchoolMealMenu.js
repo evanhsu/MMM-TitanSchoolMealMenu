@@ -1,9 +1,10 @@
 Module.register('MMM-TitanSchoolMealMenu', {
   defaults: {
     retryDelayMs: 5000, // milliseconds
-    updateIntervalMs: 60000, // milliseconds (60000ms == 1 minute)
+    updateIntervalMs: 60 * 60 * 1000, // milliseconds
     buildingId: '23125610-cbbc-eb11-a2cb-82fe13669c55',
     districtId: '93f76ff0-2eb7-eb11-a2c4-e816644282bd',
+    numberOfDaysToDisplay: 3,
   },
 
   requiresVersion: '2.1.0', // Required version of MagicMirror
@@ -12,8 +13,6 @@ Module.register('MMM-TitanSchoolMealMenu', {
     var self = this;
 
     this.dataNotification = null;
-
-    //Flag for check if module is loaded
     this.loaded = false;
 
     // Send the module config to the node_helper
@@ -24,9 +23,9 @@ Module.register('MMM-TitanSchoolMealMenu', {
       districtId: this.config.districtId,
     });
 
-    // Schedule update timer.
-    this.getData();
+    // Schedule update timer
     setInterval(function () {
+      this.getData();
       self.updateDom();
     }, this.config.updateIntervalMs);
   },
@@ -35,22 +34,10 @@ Module.register('MMM-TitanSchoolMealMenu', {
     this.sendSocketNotification('TITANSCHOOLS_SET_CONFIG', config);
   },
 
-  /*
-   * getData
-   * function example return data and show it in the module wrapper
-   * get a URL request
-   *
-   */
   getData: function () {
     this.sendSocketNotification('TITANSCHOOLS_FETCH_DATA_REQUEST', {});
   },
 
-  /* scheduleUpdate()
-   * Schedule next update.
-   *
-   * argument delay number - Milliseconds before next update.
-   *  If empty, this.config.updateInterval is used.
-   */
   scheduleUpdate: function (delay) {
     var nextLoad = this.config.updateInterval;
     if (typeof delay !== 'undefined' && delay >= 0) {
@@ -77,10 +64,46 @@ Module.register('MMM-TitanSchoolMealMenu', {
 
     // Data from helper
     if (this.dataNotification) {
-      var wrapperDataNotification = document.createElement('div');
-      wrapperDataNotification.innerHTML = `${this.translate('UPDATE')}: ${
-        this.dataNotification.tomorrow[0].entree
-      }`;
+      console.log(this.dataNotification);
+      const wrapperDataNotification = document.createElement('div');
+
+      const meals = document.createElement('ul');
+      this.dataNotification.forEach((dayMenu, index) => {
+        if (index >= this.config.numberOfDaysToDisplay) {
+          return;
+        }
+
+        const label = document.createElement('li');
+        label.innerHTML = dayMenu.label;
+        label.style = 'label';
+        meals.appendChild(label);
+
+        const breakfastList = document.createElement('ul');
+        const breakfastLabel = document.createElement('li');
+        breakfastLabel.innerHTML = 'Breakfast';
+        breakfastList.appendChild(breakfastLabel);
+        label.appendChild(breakfastList);
+
+        const breakfastMenuList = document.createElement('ul');
+        const breakfastMenuItems = document.createElement('li');
+        breakfastMenuItems.innerHTML = dayMenu.breakfast ?? 'none';
+        breakfastMenuList.appendChild(breakfastMenuItems);
+        breakfastLabel.appendChild(breakfastMenuList);
+
+        const lunchList = document.createElement('ul');
+        const lunchLabel = document.createElement('li');
+        lunchLabel.innerHTML = 'Lunch';
+        lunchList.appendChild(lunchLabel);
+        label.appendChild(lunchList);
+
+        const lunchMenuList = document.createElement('ul');
+        const lunchMenuItems = document.createElement('li');
+        lunchMenuItems.innerHTML = dayMenu.breakfast ?? 'none';
+        lunchMenuList.appendChild(lunchMenuItems);
+        lunchLabel.appendChild(lunchMenuList);
+      });
+
+      wrapperDataNotification.appendChild(meals);
       wrapper.appendChild(wrapperDataNotification);
     }
 
@@ -88,7 +111,6 @@ Module.register('MMM-TitanSchoolMealMenu', {
   },
 
   getScripts: function () {
-    // return [this.file('constants.js')];
     return [];
   },
 
@@ -96,9 +118,7 @@ Module.register('MMM-TitanSchoolMealMenu', {
     return ['MMM-TitanSchoolMealMenu.css'];
   },
 
-  // Load translations files
   getTranslations: function () {
-    //FIXME: This can be load a one file javascript definition
     return {
       en: 'translations/en.json',
       //   es: 'translations/es.json',
@@ -107,9 +127,19 @@ Module.register('MMM-TitanSchoolMealMenu', {
 
   // socketNotificationReceived from helper
   socketNotificationReceived: function (notificationName, payload) {
+    console.log(
+      `TitanSchools module received notification: ${notificationName}`
+    );
+
     if (notificationName === 'TITANSCHOOLS_FETCH_DATA_SUCCESS') {
       this.dataNotification = payload;
       this.loaded = true;
+      this.updateDom();
+    }
+
+    if (notificationName === 'TITANSCHOOLS_CLIENT_READY') {
+      this.loaded = true;
+      this.getData();
       this.updateDom();
     }
   },

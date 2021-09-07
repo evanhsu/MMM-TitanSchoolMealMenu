@@ -3203,6 +3203,40 @@ class TitanSchoolsClient {
     return this.processData(data);
   }
 
+  /**
+   * Fetches menu data from the TitanSchools API and formats it as shown below
+   *
+   * @param string startDate
+   * @returns An array of meals shaped like this:
+   *
+   * [
+   *   { "date": "9-6-2021", "label": "Today" },
+   *   {
+   *     "date": "9-7-2021",
+   *     "label": "Tomorrow",
+   *     "breakfast": "SCRAMBLED EGGS & FRENCH TOAST, APPLE,MIXED FRUIT,JUICE, APPLE 4 OZ.,JUICE, GRAPE 4 OZ.,JUICE, ORANGE 4 OZ., MILK CHOCOLATE FF CARTON HP,MILK WHITE 1% CARTON HP",
+   *     "lunch": "STUFFED CHEESE BREADSTICK, COOKIE VARIETY, MARINARA CUP,CARROTS- INDV PACKS, PEACHES SLICED, MILK CHOCOLATE FF CARTON HP,MILK WHITE 1% CARTON HP, RANCH CUP"
+   *   },
+   *   {
+   *     "date": "9-8-2021",
+   *     "label": "Wednesday",
+   *     "breakfast": "CEREAL LUCKY CHARMS GF, CEREAL, CINNAMON TOAST, JUICE, APPLE 4 OZ.,JUICE, GRAPE 4 OZ.,JUICE, ORANGE 4 OZ.,MIXED FRUIT,APPLE, MILK CHOCOLATE FF CARTON HP,MILK WHITE 1% CARTON HP",
+   *     "lunch": "CHICKEN SANDWICH, BEANS VEGETARIAN, PEARS SLICED, MILK CHOCOLATE FF CARTON HP,MILK WHITE 1% CARTON HP, KETCHUP PACKET,RANCH CUP, LETTUCE & PICKLE CUP"
+   *   },
+   *   {
+   *     "date": "9-9-2021",
+   *     "label": "Thursday",
+   *     "breakfast": "CHERRY FRUDEL, JUICE, APPLE 4 OZ.,JUICE, GRAPE 4 OZ.,JUICE, ORANGE 4 OZ.,MIXED FRUIT,APPLE, MILK CHOCOLATE FF CARTON HP,MILK WHITE 1% CARTON HP",
+   *     "lunch": "ORANGE CHICKEN, BROWN RICE, GREEN BEANS, APPLE, MILK CHOCOLATE FF CARTON HP,MILK WHITE 1% CARTON HP"
+   *   },
+   *   {
+   *     "date": "9-10-2021",
+   *     "label": "Friday",
+   *     "breakfast": "POP TART, CINNAMON,POP TART, STRAWBERRY, JUICE, APPLE 4 OZ.,JUICE, GRAPE 4 OZ.,JUICE, ORANGE 4 OZ.,PEACHES SLICED, MILK CHOCOLATE FF CARTON HP,MILK WHITE 1% CARTON HP",
+   *     "lunch": "HAMBURGER, GARDEN SALAD, PEACH CUP ZEE ZEE, MILK CHOCOLATE FF CARTON HP,MILK WHITE 1% CARTON HP, KETCHUP PACKET,MUSTARD PACKET,RANCH CUP, LETTUCE & PICKLE CUP"
+   *   }
+   * ]
+   */
   async fetchMenu(startDate = null) {
     let params = {
       ...this.requestParams,
@@ -3277,11 +3311,13 @@ class TitanSchoolsClient {
       };
     });
 
-    console.log(
-      `School meal info from titanschools API: ${JSON.stringify(
-        upcomingMenuByDate
-      )}`
-    );
+    // console.log(
+    //   `School meal info from titanschools API: ${JSON.stringify(
+    //     upcomingMenuByDate
+    //   )}`
+    // );
+
+    return upcomingMenuByDate;
   }
 }
 
@@ -3335,11 +3371,10 @@ const upcomingRelativeDates = (numberOfDays = 5) => {
   return weekOfRelativeDates;
 };
 
-const titan = new TitanSchoolsClient({
-  buildingId: '23125610-cbbc-eb11-a2cb-82fe13669c55',
-  districtId: '93f76ff0-2eb7-eb11-a2c4-e816644282bd',
-});
-
-titan.fetchMockMenu();
+// const t = new TitanSchoolsClient({
+//   buildingId: '23125610-cbbc-eb11-a2cb-82fe13669c55',
+//   districtId: '93f76ff0-2eb7-eb11-a2c4-e816644282bd',
+// });
+// t.fetchMockMenu();
 
 module.exports = TitanSchoolsClient;

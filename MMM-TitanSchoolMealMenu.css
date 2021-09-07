@@ -1,2 +1,11 @@
-.table-row {
+.MMM-TitanSchoolMealMenu {
+  width: 50%;
+}
+
+.label {
+  font-weight: 700;
+}
+
+ul {
+  list-style-type: none;
 }

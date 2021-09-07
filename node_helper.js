@@ -11,38 +11,16 @@ module.exports = NodeHelper.create({
     self.titanSchoolsClient = null;
   },
 
-  fetchData: function () {
+  fetchData: async function () {
     var self = this;
 
     if (!self.titanSchoolsClient) {
       return;
     }
 
-    this.titanSchoolsClient.fetchMenu().then((response) => {
-      console.log(response.data);
-
-      if (response.status?.code === '400') {
-        // Do some error handling
-      }
-
-      const menusTomorrow = response.data.FamilyMenuSessions.map(
-        (menuSession) => {
-          return {
-            date: menuSession.MenuPlans[0].Days[0].Date,
-            breakfastOrLunch: menuSession.ServingSession, // "Breakfast" or "Lunch"
-            entree:
-              menuSession.MenuPlans[0].Days[0].RecipeCategories[0].Recipes[0]
-                .RecipeName,
-          };
-        }
-      );
-
-      const payload = {
-        tomorrow: menusTomorrow,
-      };
-
-      this.sendSocketNotification('TITANSCHOOLS_FETCH_DATA_SUCCESS', payload);
-    });
+    // const menu = await this.titanSchoolsClient.fetchMockMenu();
+    const menu = await this.titanSchoolsClient.fetchMenu();
+    this.sendSocketNotification('TITANSCHOOLS_FETCH_DATA_SUCCESS', menu);
   },
 
   // Subclass socketNotificationReceived received.
@@ -55,6 +33,7 @@ module.exports = NodeHelper.create({
         buildingId: self.config.buildingId,
         districtId: self.config.districtId,
       });
+      this.sendSocketNotification('TITANSCHOOLS_CLIENT_READY');
     }
 
     if (notificationName === 'TITANSCHOOLS_FETCH_DATA_REQUEST') {
