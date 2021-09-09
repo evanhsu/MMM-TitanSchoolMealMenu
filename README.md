@@ -16,6 +16,15 @@ Add this to your MagicMirror `config.js`:
             buildingId: '23125610-cbbc-eb11-a2cb-82fe13669c55',
             districtId: '93f76ff0-2eb7-eb11-a2c4-e816644282bd',
             numberOfDaysToDisplay: 3, // Default 3
+            recipeCategoriesToInclude: [
+                "Main Entree",
+                "Grain"
+                // , "Fruit"
+                // , "Vegetable"
+                // , "Milk"
+                // , "Condiment"
+                // , "Extra"
+            ]
         },
     },
 

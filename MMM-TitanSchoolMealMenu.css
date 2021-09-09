@@ -6,6 +6,11 @@
   font-weight: 300;
 }
 
+.error {
+  color: gray;
+  width: 50%;
+}
+
 ul {
   list-style-type: none;
 }
