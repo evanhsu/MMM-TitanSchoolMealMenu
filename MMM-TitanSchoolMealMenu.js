@@ -3,6 +3,7 @@ Module.register("MMM-TitanSchoolMealMenu", {
     retryDelayMs: 60 * 1000, // milliseconds
     updateIntervalMs: 60 * 60 * 1000, // milliseconds
     numberOfDaysToDisplay: 3,
+    size: "medium",
     recipeCategoriesToInclude: [
       "Main Entree",
       "Grain"
@@ -95,7 +96,7 @@ Module.register("MMM-TitanSchoolMealMenu", {
 
         const dayLabel = document.createElement("li");
         dayLabel.innerHTML = dayMenu.label;
-        dayLabel.className = "day-label";
+        dayLabel.className = `day-label ${this.config.size || ""}`;
         meals.appendChild(dayLabel);
 
         const breakfastMenuList = document.createElement("ul");
@@ -103,14 +104,16 @@ Module.register("MMM-TitanSchoolMealMenu", {
         breakfastMenuItems.innerHTML = `Breakfast: ${
           dayMenu.breakfast ?? "none"
         }`;
-        breakfastMenuList.className = "meal-description";
+        breakfastMenuList.className = `meal-description ${
+          this.config.size || ""
+        }`;
         breakfastMenuList.appendChild(breakfastMenuItems);
         dayLabel.appendChild(breakfastMenuList);
 
         const lunchMenuList = document.createElement("ul");
         const lunchMenuItems = document.createElement("li");
         lunchMenuItems.innerHTML = `Lunch: ${dayMenu.lunch ?? "none"}`;
-        lunchMenuList.className = "meal-description";
+        lunchMenuList.className = `meal-description ${this.config.size || ""}`;
         lunchMenuList.appendChild(lunchMenuItems);
         dayLabel.appendChild(lunchMenuList);
       });

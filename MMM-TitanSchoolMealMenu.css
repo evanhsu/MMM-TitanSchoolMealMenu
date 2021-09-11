@@ -11,6 +11,18 @@
   width: 50%;
 }
 
+.small {
+  font-size: 15px;
+}
+
+.medium {
+  font-size: 23px;
+}
+
+.large {
+  font-size: 30px;
+}
+
 ul {
   list-style-type: none;
 }
