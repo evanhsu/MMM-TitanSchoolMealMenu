@@ -33,7 +33,7 @@ class TitanSchoolsClient {
 
     this.client = axios.create({
       baseURL: "https://family.titank12.com/api/",
-      timeout: 2000
+      timeout: 5000
     });
   }
 
