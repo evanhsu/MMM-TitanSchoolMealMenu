@@ -120,7 +120,9 @@ class TitanSchoolsClient {
 
   processData(data) {
     const menus = data.FamilyMenuSessions.map((menuSession) => {
-      const breakfastOrLunch = menuSession.ServingSession; // "Breakfast" or "Lunch"
+      // The titank12 API has several possible values for the ServingSession,
+      // including "Breakfast", "Lunch", "Seamless Summer Lunch", "Seamless Summer Breakfast".
+      const breakfastOrLunch = menuSession.ServingSession.match(/breakfast/i) ? 'breakfast' : 'lunch';
       const menusByDate = menuSession.MenuPlans[0].Days.map(
         (menuForThisDate) => {
           return {
