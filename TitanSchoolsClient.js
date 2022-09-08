@@ -136,7 +136,8 @@ class TitanSchoolsClient {
               .map((recipeCategory) => {
                 return recipeCategory.Recipes.map(
                   (recipe) => recipe.RecipeName
-                );
+                )
+                .join(" or ");
               })
               .join(", ")
           };
