@@ -1,28 +1,20 @@
-.day-label {
+.MMM-TitanSchoolMealMenu .day-label {
   font-weight: 700;
 }
 
-.meal-description {
+.MMM-TitanSchoolMealMenu .meal-description {
   font-weight: 300;
 }
 
-.error {
+.MMM-TitanSchoolMealMenu .meal-title {
+  font-weight: 400;
+}
+
+.MMM-TitanSchoolMealMenu .error {
   color: gray;
   width: 50%;
 }
 
-.small {
-  font-size: 15px;
-}
-
-.medium {
-  font-size: 23px;
-}
-
-.large {
-  font-size: 30px;
-}
-
-ul {
+.MMM-TitanSchoolMealMenu ul {
   list-style-type: none;
 }
