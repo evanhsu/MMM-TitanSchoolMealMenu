@@ -1,6 +1,6 @@
 Module.register("MMM-TitanSchoolMealMenu", {
   defaults: {
-    retryDelayMs: 60 * 1000, // milliseconds
+    retryDelayMs: 20 * 1000, // milliseconds
     updateIntervalMs: 60 * 60 * 1000, // milliseconds
     numberOfDaysToDisplay: 3,
     size: "medium",
@@ -23,6 +23,8 @@ Module.register("MMM-TitanSchoolMealMenu", {
     this.dataNotification = null; // This will contain the (formatted) data from the remote API after each request
     this.dataError = false; // Toggle to true if an API request results in an error
     this.loaded = false; // Toggle to true once this module has configured its API client and is ready to make API requests
+    // The instanceName is used to "namespace" the notifications when there are multiple instances of the TitanSchoolMealMenu module fetching different school menus
+    this.instanceName = `${this.config.buildingId}_${this.config.districtId}`;
 
     // Send the module config to the node_helper
     this.broadcastConfig({
@@ -30,7 +32,8 @@ Module.register("MMM-TitanSchoolMealMenu", {
       updateIntervalMs: this.config.updateIntervalMs,
       buildingId: this.config.buildingId,
       districtId: this.config.districtId,
-      recipeCategoriesToInclude: this.config.recipeCategoriesToInclude
+      recipeCategoriesToInclude: this.config.recipeCategoriesToInclude,
+      instanceName: this.instanceName
     });
 
     // Schedule update timer
@@ -40,12 +43,26 @@ Module.register("MMM-TitanSchoolMealMenu", {
     }, self.config.updateIntervalMs);
   },
 
+  getNamespacedNotificationName: function (notificationName) {
+    return `TITANSCHOOLS_${notificationName}::${this.instanceName}`;
+  },
+
+  sendNamespacedSocketNotification: function (notificationName, config) {
+    return this.sendSocketNotification(
+      this.getNamespacedNotificationName(notificationName),
+      config
+    );
+  },
+
   broadcastConfig: function (config) {
-    this.sendSocketNotification("TITANSCHOOLS_SET_CONFIG", config);
+    // This notification is intentionally *NOT NAMESPACED*
+    // This is the first notification that establishes a new instance of the TitaSchoolMealMenu module, so the
+    // namespaced notifications haven't been registered yet (the listeners don't know the name of this instance yet).
+    this.sendSocketNotification(`TITANSCHOOLS_SET_CONFIG`, config);
   },
 
   getData: function () {
-    this.sendSocketNotification("TITANSCHOOLS_FETCH_DATA_REQUEST", {});
+    this.sendNamespacedSocketNotification(`FETCH_DATA_REQUEST`, {});
   },
 
   scheduleUpdate: function (delay) {
@@ -163,17 +180,23 @@ Module.register("MMM-TitanSchoolMealMenu", {
   // socketNotificationReceived from helper
   socketNotificationReceived: function (notificationName, payload) {
     console.log(
-      `TitanSchools module received notification: ${notificationName}`
+      `TitanSchools module (${this.instanceName}) received notification: ${notificationName}`
     );
 
-    if (notificationName === "TITANSCHOOLS_FETCH_DATA_SUCCESS") {
+    if (
+      notificationName ===
+      this.getNamespacedNotificationName("FETCH_DATA_SUCCESS")
+    ) {
       this.dataNotification = payload;
       this.dataError = false;
       this.loaded = true;
       this.updateDom();
     }
 
-    if (notificationName === "TITANSCHOOLS_FETCH_DATA_FAILED") {
+    if (
+      notificationName ===
+      this.getNamespacedNotificationName("FETCH_DATA_FAILED")
+    ) {
       console.error(payload);
       console.error(
         `Retrying in ${this.config.retryDelayMs / 1000} seconds...`
@@ -186,7 +209,9 @@ Module.register("MMM-TitanSchoolMealMenu", {
       this.updateDom();
     }
 
-    if (notificationName === "TITANSCHOOLS_CLIENT_READY") {
+    if (
+      notificationName === this.getNamespacedNotificationName("CLIENT_READY")
+    ) {
       this.loaded = true;
       this.getData();
       this.updateDom();
