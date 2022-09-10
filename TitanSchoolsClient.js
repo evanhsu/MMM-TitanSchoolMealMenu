@@ -33,7 +33,7 @@ class TitanSchoolsClient {
 
     this.client = axios.create({
       baseURL: "https://family.titank12.com/api/",
-      timeout: 5000
+      timeout: 8000
     });
   }
 
@@ -122,7 +122,9 @@ class TitanSchoolsClient {
     const menus = data.FamilyMenuSessions.map((menuSession) => {
       // The titank12 API has several possible values for the ServingSession,
       // including "Breakfast", "Lunch", "Seamless Summer Lunch", "Seamless Summer Breakfast".
-      const breakfastOrLunch = menuSession.ServingSession.match(/breakfast/i) ? 'breakfast' : 'lunch';
+      const breakfastOrLunch = menuSession.ServingSession.match(/breakfast/i)
+        ? "breakfast"
+        : "lunch";
       const menusByDate = menuSession.MenuPlans[0].Days.map(
         (menuForThisDate) => {
           return {
@@ -136,8 +138,7 @@ class TitanSchoolsClient {
               .map((recipeCategory) => {
                 return recipeCategory.Recipes.map(
                   (recipe) => recipe.RecipeName
-                )
-                .join(" or ");
+                ).join(" or ");
               })
               .join(", ")
           };
