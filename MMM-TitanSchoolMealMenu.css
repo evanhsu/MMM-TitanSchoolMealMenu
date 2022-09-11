@@ -18,3 +18,12 @@
 .MMM-TitanSchoolMealMenu ul {
   list-style-type: none;
 }
+
+.MMM-TitanSchoolMealMenu .meal-list {
+  text-align: left;
+}
+
+.MMM-TitanSchoolMealMenu .meal-recipes {
+  display: block;
+  padding-left: 1em;
+}
