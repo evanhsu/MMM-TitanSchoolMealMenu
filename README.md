@@ -1,4 +1,5 @@
 # MMM-TitanSchoolMealMenu
+
 A module for the MagicMirror framework that retrieves a school meal menu from the Titan Schools API (family.titank12.com)
 
 ---
@@ -20,14 +21,15 @@ Add this to your MagicMirror `config.js`:
             updateIntervalMs: 3600000, // Optional: Milliseconds between updates; Default: 3600000 (1 hour)
             numberOfDaysToDisplay: 3, // Optional: 0 - 5; Default: 3
             recipeCategoriesToInclude: [
-                "Main Entree",
+                "Entrees",
                 "Grain"
                 // , "Fruit"
                 // , "Vegetable"
                 // , "Milk"
                 // , "Condiment"
                 // , "Extra"
-            ]
+            ],
+            debug: false // Optional: boolean; Default: false; Setting this to true will output verbose logs
         },
     },
 
@@ -69,4 +71,3 @@ You can also track multiple school menus by listing the module multiple times in
 #### 3. Use your browser's developer tools to inspect a request to the `/FamilyMenu` endpoint. The `districtId` and `buildingId` will be present as query string parameters on these requests.
 
 ![Use developer tools to inspect a network request](./docs/step3.png)
-
