@@ -7,49 +7,56 @@ const data = {
       ServingSession: "Breakfast",
       MenuPlans: [
         {
-          MenuPlanName: "2021/2022 K-5 Breakfast",
+          MenuPlanName: "K-5 Breakfast 2022/2023",
           Days: [
             {
-              Date: "9/7/2021",
+              Date: "1/18/2023",
               RecipeCategories: [
                 {
-                  CategoryName: "Main Entree",
+                  CategoryName: "Entrees",
                   Color: "#000000",
                   Recipes: [
                     {
-                      ItemId: "8cd11c38-c3e8-eb11-a2c9-c9e02b0c1f03",
-                      RecipeIdentifier: "M-33",
-                      RecipeName: "SCRAMBLED EGGS & FRENCH TOAST",
-                      ServingSize: "3 French Sticks & 1.5 oz Scrambled Eggs",
-                      GramPerServing: 117.65046249999999,
+                      ItemId: "b1b0eaad-d0e8-eb11-a2ca-8f52815bbe74",
+                      RecipeIdentifier: "M-36",
+                      RecipeName: "EGG AND CHEESE BISCUIT",
+                      ServingSize: "Sandwich ",
+                      GramPerServing: 117.710674,
                       Nutrients: [
                         {
                           Name: "Calories",
-                          Value: 227,
+                          Value: 353,
                           HasMissingNutrients: false,
                           Unit: "kcals",
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
-                          Value: 3,
+                          Name: "Total Fat",
+                          Value: 22,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
-                          Value: 495,
+                          Value: 668,
                           HasMissingNutrients: false,
                           Unit: "mg",
                           Abbreviation: "Na"
                         },
                         {
                           Name: "Total Carbohydrate",
-                          Value: 25,
+                          Value: 28,
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 10,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
                         }
                       ],
                       Allergens: [
@@ -65,319 +72,55 @@ const data = {
                         "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
                       ],
                       HasNutrients: true
-                    }
-                  ]
-                },
-                {
-                  CategoryName: "Fruit",
-                  Color: "#000000",
-                  Recipes: [
-                    {
-                      ItemId: "fed3fb0d-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1796",
-                      RecipeName: "APPLE",
-                      ServingSize: "Apple",
-                      GramPerServing: 100,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 52,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 1,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 14,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
                     },
                     {
-                      ItemId: "ab5b2145-36e3-eb11-a2c6-bacff064a47c",
-                      RecipeIdentifier: "9204",
-                      RecipeName: "MIXED FRUIT",
-                      ServingSize: "1/2 cup",
-                      GramPerServing: 126,
+                      ItemId: "d699b738-9dba-ec11-8e11-e4b66e08efa4",
+                      RecipeIdentifier: "M-205",
+                      RecipeName: "CINNAMON WHOLE WHEAT TOAST",
+                      ServingSize: "Slice",
+                      GramPerServing: 53.465923543689321,
                       Nutrients: [
                         {
                           Name: "Calories",
-                          Value: 60,
+                          Value: 174,
                           HasMissingNutrients: false,
                           Unit: "kcals",
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
-                          Value: 0,
+                          Name: "Total Fat",
+                          Value: 7,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
-                          Value: 10,
+                          Value: 206,
                           HasMissingNutrients: false,
                           Unit: "mg",
                           Abbreviation: "Na"
                         },
                         {
                           Name: "Total Carbohydrate",
-                          Value: 17,
+                          Value: 24,
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    },
-                    {
-                      ItemId: "801e0208-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1763",
-                      RecipeName: "JUICE, APPLE 4 OZ.",
-                      ServingSize: "Each ",
-                      GramPerServing: 113.398,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 60,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
-                          Value: 0,
+                          Name: "Protein",
+                          Value: 4,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 5,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 14,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    },
-                    {
-                      ItemId: "9b1e0208-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1764",
-                      RecipeName: "JUICE, GRAPE 4 OZ.",
-                      ServingSize: "Each",
-                      GramPerServing: 118,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 83,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 10,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 20,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    },
-                    {
-                      ItemId: "b61e0208-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1523",
-                      RecipeName: "JUICE, ORANGE 4 OZ.",
-                      ServingSize: "Each",
-                      GramPerServing: 118,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 60,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 5,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 14,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    }
-                  ]
-                },
-                {
-                  CategoryName: "Milk",
-                  Color: "#000000",
-                  Recipes: [
-                    {
-                      ItemId: "bfd3fb0d-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1349",
-                      RecipeName: "MILK CHOCOLATE FF CARTON HP",
-                      ServingSize: "Carton",
-                      GramPerServing: 240,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 120,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 180,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 20,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
+                          Abbreviation: "Pro"
                         }
                       ],
                       Allergens: [
-                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
-                        "22657378-16bf-eb11-a2c3-fc186683ca00",
-                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    },
-                    {
-                      ItemId: "bbd3fb0d-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1315",
-                      RecipeName: "MILK WHITE 1% CARTON HP",
-                      ServingSize: "Carton",
-                      GramPerServing: 236,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 110,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 2,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 130,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 13,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [
+                        "f42d3f27-60f9-eb11-a2c3-c84b228403a2",
                         "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9bf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
                         "22657378-16bf-eb11-a2c3-fc186683ca00"
                       ],
                       ReligiousRestrictions: [],
@@ -387,55 +130,60 @@ const data = {
                       HasNutrients: true
                     }
                   ]
-                }
-              ]
-            },
-            {
-              Date: "9/8/2021",
-              RecipeCategories: [
+                },
                 {
-                  CategoryName: "Main Entree",
+                  CategoryName: "Meat/Meat Alternate",
                   Color: "#000000",
                   Recipes: [
                     {
-                      ItemId: "71101b30-2bd5-eb11-a2c3-922e3c99d4d8",
-                      RecipeIdentifier: "1856",
-                      RecipeName: "CEREAL LUCKY CHARMS GF",
-                      ServingSize: "Bowl",
-                      GramPerServing: 28.3495,
+                      ItemId: "d9a2cfa5-5b0f-ed11-a7ed-d899d240e215",
+                      RecipeIdentifier: "1335",
+                      RecipeName: "LIL YAMI YOGURT- RASPBERRY/VANILLA",
+                      ServingSize: "Each",
+                      GramPerServing: 113.398,
                       Nutrients: [
                         {
                           Name: "Calories",
-                          Value: 110,
+                          Value: 140,
                           HasMissingNutrients: false,
                           Unit: "kcals",
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
-                          Value: 0,
+                          Name: "Total Fat",
+                          Value: 5,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
-                          Value: 180,
+                          Value: 50,
                           HasMissingNutrients: false,
                           Unit: "mg",
                           Abbreviation: "Na"
                         },
                         {
                           Name: "Total Carbohydrate",
-                          Value: 23,
+                          Value: 20,
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 4,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
                         }
                       ],
                       Allergens: [
                         "5443911d-bbfa-eb11-a2c3-881d5bd5e776",
-                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a"
+                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
+                        "3b600e8d-16bf-eb11-a2c3-c61aac482cb3",
+                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
                       ],
                       ReligiousRestrictions: [],
                       DietaryRestrictions: [],
@@ -444,129 +192,33 @@ const data = {
                   ]
                 },
                 {
-                  CategoryName: "Grain",
-                  Color: "#000000",
-                  Recipes: [
-                    {
-                      ItemId: "d81b0208-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1134",
-                      RecipeName: "CEREAL, CINNAMON TOAST",
-                      ServingSize: "Bowl",
-                      GramPerServing: 28.3495,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 120,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 160,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 22,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [
-                        "f42d3f27-60f9-eb11-a2c3-c84b228403a2",
-                        "9bf76ff0-2eb7-eb11-a2c4-e816644282bd",
-                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    }
-                  ]
-                },
-                {
                   CategoryName: "Fruit",
                   Color: "#000000",
                   Recipes: [
                     {
-                      ItemId: "801e0208-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1763",
-                      RecipeName: "JUICE, APPLE 4 OZ.",
-                      ServingSize: "Each ",
-                      GramPerServing: 113.398,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 60,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 5,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 14,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    },
-                    {
-                      ItemId: "9b1e0208-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1764",
-                      RecipeName: "JUICE, GRAPE 4 OZ.",
+                      ItemId: "f2ee4163-a9e8-eb11-a2ca-f5a2bc674b4a",
+                      RecipeIdentifier: "M-32",
+                      RecipeName: "FRUIT VARIETY",
                       ServingSize: "Each",
-                      GramPerServing: 118,
+                      GramPerServing: 134.84169133865248,
                       Nutrients: [
                         {
                           Name: "Calories",
-                          Value: 83,
+                          Value: 81,
                           HasMissingNutrients: false,
                           Unit: "kcals",
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
+                          Name: "Total Fat",
                           Value: 0,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
-                          Value: 10,
+                          Value: 6,
                           HasMissingNutrients: false,
                           Unit: "mg",
                           Abbreviation: "Na"
@@ -577,138 +229,21 @@ const data = {
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    },
-                    {
-                      ItemId: "b61e0208-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1523",
-                      RecipeName: "JUICE, ORANGE 4 OZ.",
-                      ServingSize: "Each",
-                      GramPerServing: 118,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 60,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 5,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 14,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    },
-                    {
-                      ItemId: "ab5b2145-36e3-eb11-a2c6-bacff064a47c",
-                      RecipeIdentifier: "9204",
-                      RecipeName: "MIXED FRUIT",
-                      ServingSize: "1/2 cup",
-                      GramPerServing: 126,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 60,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 10,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 17,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    },
-                    {
-                      ItemId: "fed3fb0d-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1796",
-                      RecipeName: "APPLE",
-                      ServingSize: "Apple",
-                      GramPerServing: 100,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 52,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
+                          Name: "Protein",
                           Value: 1,
                           HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 14,
-                          HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Carb"
+                          Abbreviation: "Pro"
                         }
                       ],
-                      Allergens: [],
+                      Allergens: [
+                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
+                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
+                      ],
                       ReligiousRestrictions: [],
                       DietaryRestrictions: [
                         "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
@@ -722,58 +257,11 @@ const data = {
                   Color: "#000000",
                   Recipes: [
                     {
-                      ItemId: "bfd3fb0d-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1349",
-                      RecipeName: "MILK CHOCOLATE FF CARTON HP",
-                      ServingSize: "Carton",
-                      GramPerServing: 240,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 120,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 180,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 20,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [
-                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
-                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
-                        "22657378-16bf-eb11-a2c3-fc186683ca00"
-                      ],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    },
-                    {
                       ItemId: "bbd3fb0d-39bf-eb11-a2c3-a257492f29f5",
                       RecipeIdentifier: "1315",
                       RecipeName: "MILK WHITE 1% CARTON HP",
                       ServingSize: "Carton",
-                      GramPerServing: 236,
+                      GramPerServing: 236.0,
                       Nutrients: [
                         {
                           Name: "Calories",
@@ -783,11 +271,11 @@ const data = {
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
+                          Name: "Total Fat",
                           Value: 2,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
@@ -802,9 +290,70 @@ const data = {
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 8,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
                         }
                       ],
                       Allergens: [
+                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
+                      ],
+                      ReligiousRestrictions: [],
+                      DietaryRestrictions: [
+                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      ],
+                      HasNutrients: true
+                    },
+                    {
+                      ItemId: "bfd3fb0d-39bf-eb11-a2c3-a257492f29f5",
+                      RecipeIdentifier: "1349",
+                      RecipeName: "MILK CHOCOLATE FF CARTON HP",
+                      ServingSize: "Carton",
+                      GramPerServing: 240.0,
+                      Nutrients: [
+                        {
+                          Name: "Calories",
+                          Value: 110,
+                          HasMissingNutrients: false,
+                          Unit: "kcals",
+                          Abbreviation: "Cal"
+                        },
+                        {
+                          Name: "Total Fat",
+                          Value: 0,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Fat"
+                        },
+                        {
+                          Name: "Sodium",
+                          Value: 210,
+                          HasMissingNutrients: false,
+                          Unit: "mg",
+                          Abbreviation: "Na"
+                        },
+                        {
+                          Name: "Total Carbohydrate",
+                          Value: 19,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 8,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
+                        }
+                      ],
+                      Allergens: [
+                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
                         "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
                         "22657378-16bf-eb11-a2c3-fc186683ca00"
                       ],
@@ -819,46 +368,53 @@ const data = {
               ]
             },
             {
-              Date: "9/9/2021",
+              Date: "1/19/2023",
               RecipeCategories: [
                 {
-                  CategoryName: "Grain",
+                  CategoryName: "Entrees",
                   Color: "#000000",
                   Recipes: [
                     {
-                      ItemId: "5dd3e7ec-51d4-eb11-a2c4-87353d5bc03e",
-                      RecipeIdentifier: "1845",
-                      RecipeName: "CHERRY FRUDEL",
-                      ServingSize: "Frudel",
+                      ItemId: "821b0208-39bf-eb11-a2c3-a257492f29f5",
+                      RecipeIdentifier: "1663",
+                      RecipeName: "MINI CINNIS",
+                      ServingSize: "Package",
                       GramPerServing: 64.920355,
                       Nutrients: [
                         {
                           Name: "Calories",
-                          Value: 210,
+                          Value: 240,
                           HasMissingNutrients: false,
                           Unit: "kcals",
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
-                          Value: 1,
+                          Name: "Total Fat",
+                          Value: 7,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
-                          Value: 260,
+                          Value: 270,
                           HasMissingNutrients: false,
                           Unit: "mg",
                           Abbreviation: "Na"
                         },
                         {
                           Name: "Total Carbohydrate",
-                          Value: 36,
+                          Value: 39,
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 0,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
                         }
                       ],
                       Allergens: [
@@ -874,19 +430,75 @@ const data = {
                         "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
                       ],
                       HasNutrients: true
+                    },
+                    {
+                      ItemId: "d699b738-9dba-ec11-8e11-e4b66e08efa4",
+                      RecipeIdentifier: "M-205",
+                      RecipeName: "CINNAMON WHOLE WHEAT TOAST",
+                      ServingSize: "Slice",
+                      GramPerServing: 53.465923543689321,
+                      Nutrients: [
+                        {
+                          Name: "Calories",
+                          Value: 174,
+                          HasMissingNutrients: false,
+                          Unit: "kcals",
+                          Abbreviation: "Cal"
+                        },
+                        {
+                          Name: "Total Fat",
+                          Value: 7,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Fat"
+                        },
+                        {
+                          Name: "Sodium",
+                          Value: 206,
+                          HasMissingNutrients: false,
+                          Unit: "mg",
+                          Abbreviation: "Na"
+                        },
+                        {
+                          Name: "Total Carbohydrate",
+                          Value: 24,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 4,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
+                        }
+                      ],
+                      Allergens: [
+                        "f42d3f27-60f9-eb11-a2c3-c84b228403a2",
+                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9bf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
+                      ],
+                      ReligiousRestrictions: [],
+                      DietaryRestrictions: [
+                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      ],
+                      HasNutrients: true
                     }
                   ]
                 },
                 {
-                  CategoryName: "Fruit",
+                  CategoryName: "Meat/Meat Alternate",
                   Color: "#000000",
                   Recipes: [
                     {
-                      ItemId: "801e0208-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1763",
-                      RecipeName: "JUICE, APPLE 4 OZ.",
-                      ServingSize: "Each ",
-                      GramPerServing: 113.398,
+                      ItemId: "288eec28-65fd-ec11-a7e4-e3cd2760692c",
+                      RecipeIdentifier: "1323",
+                      RecipeName: "CHEESE STICK, MOZZARELLA",
+                      ServingSize: "Each",
+                      GramPerServing: 28.3495,
                       Nutrients: [
                         {
                           Name: "Calories",
@@ -896,58 +508,69 @@ const data = {
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
-                          Value: 0,
+                          Name: "Total Fat",
+                          Value: 3,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
-                          Value: 5,
+                          Value: 200,
                           HasMissingNutrients: false,
                           Unit: "mg",
                           Abbreviation: "Na"
                         },
                         {
                           Name: "Total Carbohydrate",
-                          Value: 14,
+                          Value: 1,
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 7,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
                         }
                       ],
-                      Allergens: [],
+                      Allergens: ["22657378-16bf-eb11-a2c3-fc186683ca00"],
                       ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
+                      DietaryRestrictions: [],
                       HasNutrients: true
-                    },
+                    }
+                  ]
+                },
+                {
+                  CategoryName: "Fruit",
+                  Color: "#000000",
+                  Recipes: [
                     {
-                      ItemId: "9b1e0208-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1764",
-                      RecipeName: "JUICE, GRAPE 4 OZ.",
+                      ItemId: "f2ee4163-a9e8-eb11-a2ca-f5a2bc674b4a",
+                      RecipeIdentifier: "M-32",
+                      RecipeName: "FRUIT VARIETY",
                       ServingSize: "Each",
-                      GramPerServing: 118,
+                      GramPerServing: 134.84169133865248,
                       Nutrients: [
                         {
                           Name: "Calories",
-                          Value: 83,
+                          Value: 81,
                           HasMissingNutrients: false,
                           Unit: "kcals",
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
+                          Name: "Total Fat",
                           Value: 0,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
-                          Value: 10,
+                          Value: 6,
                           HasMissingNutrients: false,
                           Unit: "mg",
                           Abbreviation: "Na"
@@ -958,138 +581,21 @@ const data = {
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    },
-                    {
-                      ItemId: "b61e0208-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1523",
-                      RecipeName: "JUICE, ORANGE 4 OZ.",
-                      ServingSize: "Each",
-                      GramPerServing: 118,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 60,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 5,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 14,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    },
-                    {
-                      ItemId: "ab5b2145-36e3-eb11-a2c6-bacff064a47c",
-                      RecipeIdentifier: "9204",
-                      RecipeName: "MIXED FRUIT",
-                      ServingSize: "1/2 cup",
-                      GramPerServing: 126,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 60,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 10,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 17,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    },
-                    {
-                      ItemId: "fed3fb0d-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1796",
-                      RecipeName: "APPLE",
-                      ServingSize: "Apple",
-                      GramPerServing: 100,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 52,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
+                          Name: "Protein",
                           Value: 1,
                           HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 14,
-                          HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Carb"
+                          Abbreviation: "Pro"
                         }
                       ],
-                      Allergens: [],
+                      Allergens: [
+                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
+                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
+                      ],
                       ReligiousRestrictions: [],
                       DietaryRestrictions: [
                         "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
@@ -1103,58 +609,11 @@ const data = {
                   Color: "#000000",
                   Recipes: [
                     {
-                      ItemId: "bfd3fb0d-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1349",
-                      RecipeName: "MILK CHOCOLATE FF CARTON HP",
-                      ServingSize: "Carton",
-                      GramPerServing: 240,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 120,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 180,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 20,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [
-                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
-                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
-                        "22657378-16bf-eb11-a2c3-fc186683ca00"
-                      ],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    },
-                    {
                       ItemId: "bbd3fb0d-39bf-eb11-a2c3-a257492f29f5",
                       RecipeIdentifier: "1315",
                       RecipeName: "MILK WHITE 1% CARTON HP",
                       ServingSize: "Carton",
-                      GramPerServing: 236,
+                      GramPerServing: 236.0,
                       Nutrients: [
                         {
                           Name: "Calories",
@@ -1164,11 +623,11 @@ const data = {
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
+                          Name: "Total Fat",
                           Value: 2,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
@@ -1183,6 +642,13 @@ const data = {
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 8,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
                         }
                       ],
                       Allergens: [
@@ -1193,6 +659,111 @@ const data = {
                       DietaryRestrictions: [
                         "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
                       ],
+                      HasNutrients: true
+                    },
+                    {
+                      ItemId: "bfd3fb0d-39bf-eb11-a2c3-a257492f29f5",
+                      RecipeIdentifier: "1349",
+                      RecipeName: "MILK CHOCOLATE FF CARTON HP",
+                      ServingSize: "Carton",
+                      GramPerServing: 240.0,
+                      Nutrients: [
+                        {
+                          Name: "Calories",
+                          Value: 110,
+                          HasMissingNutrients: false,
+                          Unit: "kcals",
+                          Abbreviation: "Cal"
+                        },
+                        {
+                          Name: "Total Fat",
+                          Value: 0,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Fat"
+                        },
+                        {
+                          Name: "Sodium",
+                          Value: 210,
+                          HasMissingNutrients: false,
+                          Unit: "mg",
+                          Abbreviation: "Na"
+                        },
+                        {
+                          Name: "Total Carbohydrate",
+                          Value: 19,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 8,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
+                        }
+                      ],
+                      Allergens: [
+                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
+                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
+                      ],
+                      ReligiousRestrictions: [],
+                      DietaryRestrictions: [
+                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      ],
+                      HasNutrients: true
+                    },
+                    {
+                      ItemId: "45440544-1361-ed11-a9a4-ea72b2684e36",
+                      RecipeIdentifier: "M-363",
+                      RecipeName: "HOT CHOCOLATE",
+                      ServingSize: "8 fl oz",
+                      GramPerServing: 240.0,
+                      Nutrients: [
+                        {
+                          Name: "Calories",
+                          Value: 150,
+                          HasMissingNutrients: false,
+                          Unit: "kcals",
+                          Abbreviation: "Cal"
+                        },
+                        {
+                          Name: "Total Fat",
+                          Value: 3,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Fat"
+                        },
+                        {
+                          Name: "Sodium",
+                          Value: 220,
+                          HasMissingNutrients: false,
+                          Unit: "mg",
+                          Abbreviation: "Na"
+                        },
+                        {
+                          Name: "Total Carbohydrate",
+                          Value: 24,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 8,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
+                        }
+                      ],
+                      Allergens: [
+                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
+                      ],
+                      ReligiousRestrictions: [],
+                      DietaryRestrictions: [],
                       HasNutrients: true
                     }
                   ]
@@ -1200,101 +771,237 @@ const data = {
               ]
             },
             {
-              Date: "9/10/2021",
+              Date: "1/20/2023",
               RecipeCategories: [
                 {
-                  CategoryName: "Grain",
+                  CategoryName: "Entrees",
                   Color: "#000000",
                   Recipes: [
                     {
-                      ItemId: "c1d0fb0d-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1646",
-                      RecipeName: "POP TART, CINNAMON",
-                      ServingSize: "Pouch",
-                      GramPerServing: 100,
+                      ItemId: "c19017ce-7c1d-ec11-a2c9-e329270a234e",
+                      RecipeIdentifier: "1068",
+                      RecipeName: "APPLE CINNAMON MUFFIN TOP",
+                      ServingSize: "Each",
+                      GramPerServing: 87.88345,
                       Nutrients: [
                         {
                           Name: "Calories",
-                          Value: 370,
+                          Value: 250,
                           HasMissingNutrients: false,
                           Unit: "kcals",
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
-                          Value: 2,
+                          Name: "Total Fat",
+                          Value: 7,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
-                          Value: 380,
+                          Value: 150,
                           HasMissingNutrients: false,
                           Unit: "mg",
                           Abbreviation: "Na"
                         },
                         {
                           Name: "Total Carbohydrate",
-                          Value: 75,
+                          Value: 43,
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 5,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
                         }
                       ],
                       Allergens: [
-                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
-                        "9bf76ff0-2eb7-eb11-a2c4-e816644282bd",
                         "f42d3f27-60f9-eb11-a2c3-c84b228403a2",
-                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
-                        "5443911d-bbfa-eb11-a2c3-881d5bd5e776"
+                        "95f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9bf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
                       ],
                       ReligiousRestrictions: [],
-                      DietaryRestrictions: [],
+                      DietaryRestrictions: [
+                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      ],
                       HasNutrients: true
                     },
                     {
-                      ItemId: "e4d0fb0d-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1647",
-                      RecipeName: "POP TART, STRAWBERRY",
-                      ServingSize: "Pouch",
-                      GramPerServing: 100,
+                      ItemId: "0a3edc51-7d1d-ec11-a2c9-e329270a234e",
+                      RecipeIdentifier: "1069",
+                      RecipeName: "CHOCOLATE CHIP MUFFIN TOP",
+                      ServingSize: "Each",
+                      GramPerServing: 87.88345,
                       Nutrients: [
                         {
                           Name: "Calories",
-                          Value: 360,
+                          Value: 270,
                           HasMissingNutrients: false,
                           Unit: "kcals",
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
-                          Value: 2,
+                          Name: "Total Fat",
+                          Value: 8,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
-                          Value: 360,
+                          Value: 140,
                           HasMissingNutrients: false,
                           Unit: "mg",
                           Abbreviation: "Na"
                         },
                         {
                           Name: "Total Carbohydrate",
-                          Value: 75,
+                          Value: 45,
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 5,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
                         }
                       ],
                       Allergens: [
+                        "f42d3f27-60f9-eb11-a2c3-c84b228403a2",
+                        "95f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9bf76ff0-2eb7-eb11-a2c4-e816644282bd",
                         "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
+                      ],
+                      ReligiousRestrictions: [],
+                      DietaryRestrictions: [
+                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      ],
+                      HasNutrients: true
+                    },
+                    {
+                      ItemId: "d699b738-9dba-ec11-8e11-e4b66e08efa4",
+                      RecipeIdentifier: "M-205",
+                      RecipeName: "CINNAMON WHOLE WHEAT TOAST",
+                      ServingSize: "Slice",
+                      GramPerServing: 53.465923543689321,
+                      Nutrients: [
+                        {
+                          Name: "Calories",
+                          Value: 174,
+                          HasMissingNutrients: false,
+                          Unit: "kcals",
+                          Abbreviation: "Cal"
+                        },
+                        {
+                          Name: "Total Fat",
+                          Value: 7,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Fat"
+                        },
+                        {
+                          Name: "Sodium",
+                          Value: 206,
+                          HasMissingNutrients: false,
+                          Unit: "mg",
+                          Abbreviation: "Na"
+                        },
+                        {
+                          Name: "Total Carbohydrate",
+                          Value: 24,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 4,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
+                        }
+                      ],
+                      Allergens: [
+                        "f42d3f27-60f9-eb11-a2c3-c84b228403a2",
+                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9bf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
+                      ],
+                      ReligiousRestrictions: [],
+                      DietaryRestrictions: [
+                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      ],
+                      HasNutrients: true
+                    }
+                  ]
+                },
+                {
+                  CategoryName: "Meat/Meat Alternate",
+                  Color: "#000000",
+                  Recipes: [
+                    {
+                      ItemId: "d9a2cfa5-5b0f-ed11-a7ed-d899d240e215",
+                      RecipeIdentifier: "1335",
+                      RecipeName: "LIL YAMI YOGURT- RASPBERRY/VANILLA",
+                      ServingSize: "Each",
+                      GramPerServing: 113.398,
+                      Nutrients: [
+                        {
+                          Name: "Calories",
+                          Value: 140,
+                          HasMissingNutrients: false,
+                          Unit: "kcals",
+                          Abbreviation: "Cal"
+                        },
+                        {
+                          Name: "Total Fat",
+                          Value: 5,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Fat"
+                        },
+                        {
+                          Name: "Sodium",
+                          Value: 50,
+                          HasMissingNutrients: false,
+                          Unit: "mg",
+                          Abbreviation: "Na"
+                        },
+                        {
+                          Name: "Total Carbohydrate",
+                          Value: 20,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 4,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
+                        }
+                      ],
+                      Allergens: [
                         "5443911d-bbfa-eb11-a2c3-881d5bd5e776",
                         "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
-                        "f42d3f27-60f9-eb11-a2c3-c84b228403a2",
-                        "9bf76ff0-2eb7-eb11-a2c4-e816644282bd"
+                        "3b600e8d-16bf-eb11-a2c3-c61aac482cb3",
+                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
                       ],
                       ReligiousRestrictions: [],
                       DietaryRestrictions: [],
@@ -1307,72 +1014,29 @@ const data = {
                   Color: "#000000",
                   Recipes: [
                     {
-                      ItemId: "801e0208-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1763",
-                      RecipeName: "JUICE, APPLE 4 OZ.",
-                      ServingSize: "Each ",
-                      GramPerServing: 113.398,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 60,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 5,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 14,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    },
-                    {
-                      ItemId: "9b1e0208-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1764",
-                      RecipeName: "JUICE, GRAPE 4 OZ.",
+                      ItemId: "f2ee4163-a9e8-eb11-a2ca-f5a2bc674b4a",
+                      RecipeIdentifier: "M-32",
+                      RecipeName: "FRUIT VARIETY",
                       ServingSize: "Each",
-                      GramPerServing: 118,
+                      GramPerServing: 134.84169133865248,
                       Nutrients: [
                         {
                           Name: "Calories",
-                          Value: 83,
+                          Value: 81,
                           HasMissingNutrients: false,
                           Unit: "kcals",
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
+                          Name: "Total Fat",
                           Value: 0,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
-                          Value: 10,
+                          Value: 6,
                           HasMissingNutrients: false,
                           Unit: "mg",
                           Abbreviation: "Na"
@@ -1383,95 +1047,21 @@ const data = {
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 1,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
                         }
                       ],
-                      Allergens: [],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      Allergens: [
+                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
+                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
                       ],
-                      HasNutrients: true
-                    },
-                    {
-                      ItemId: "b61e0208-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1523",
-                      RecipeName: "JUICE, ORANGE 4 OZ.",
-                      ServingSize: "Each",
-                      GramPerServing: 118,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 60,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 5,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 14,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    },
-                    {
-                      ItemId: "59d0fb0d-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "9031",
-                      RecipeName: "PEACHES SLICED",
-                      ServingSize: "1/2 cup",
-                      GramPerServing: 124,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 60,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 10,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 14,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [],
                       ReligiousRestrictions: [],
                       DietaryRestrictions: [
                         "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
@@ -1485,58 +1075,11 @@ const data = {
                   Color: "#000000",
                   Recipes: [
                     {
-                      ItemId: "bfd3fb0d-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1349",
-                      RecipeName: "MILK CHOCOLATE FF CARTON HP",
-                      ServingSize: "Carton",
-                      GramPerServing: 240,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 120,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 180,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 20,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [
-                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
-                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
-                        "22657378-16bf-eb11-a2c3-fc186683ca00"
-                      ],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    },
-                    {
                       ItemId: "bbd3fb0d-39bf-eb11-a2c3-a257492f29f5",
                       RecipeIdentifier: "1315",
                       RecipeName: "MILK WHITE 1% CARTON HP",
                       ServingSize: "Carton",
-                      GramPerServing: 236,
+                      GramPerServing: 236.0,
                       Nutrients: [
                         {
                           Name: "Calories",
@@ -1546,11 +1089,11 @@ const data = {
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
+                          Name: "Total Fat",
                           Value: 2,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
@@ -1565,9 +1108,70 @@ const data = {
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 8,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
                         }
                       ],
                       Allergens: [
+                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
+                      ],
+                      ReligiousRestrictions: [],
+                      DietaryRestrictions: [
+                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      ],
+                      HasNutrients: true
+                    },
+                    {
+                      ItemId: "bfd3fb0d-39bf-eb11-a2c3-a257492f29f5",
+                      RecipeIdentifier: "1349",
+                      RecipeName: "MILK CHOCOLATE FF CARTON HP",
+                      ServingSize: "Carton",
+                      GramPerServing: 240.0,
+                      Nutrients: [
+                        {
+                          Name: "Calories",
+                          Value: 110,
+                          HasMissingNutrients: false,
+                          Unit: "kcals",
+                          Abbreviation: "Cal"
+                        },
+                        {
+                          Name: "Total Fat",
+                          Value: 0,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Fat"
+                        },
+                        {
+                          Name: "Sodium",
+                          Value: 210,
+                          HasMissingNutrients: false,
+                          Unit: "mg",
+                          Abbreviation: "Na"
+                        },
+                        {
+                          Name: "Total Carbohydrate",
+                          Value: 19,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 8,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
+                        }
+                      ],
+                      Allergens: [
+                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
                         "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
                         "22657378-16bf-eb11-a2c3-fc186683ca00"
                       ],
@@ -1582,7 +1186,7 @@ const data = {
               ]
             }
           ],
-          AcademicCalenderId: "300f4540-8bc4-eb11-a2c7-8fde11d2b38a"
+          AcademicCalenderId: "d6c848b7-7daf-ec11-8e0e-db5f3ed28680"
         }
       ]
     },
@@ -1590,309 +1194,64 @@ const data = {
       ServingSession: "Lunch",
       MenuPlans: [
         {
-          MenuPlanName: "2021/2022 K-5 Lunch",
+          MenuPlanName: "K-5 Lunch 2022/2023",
           Days: [
             {
-              Date: "9/7/2021",
+              Date: "1/18/2023",
               RecipeCategories: [
                 {
-                  CategoryName: "Main Entree",
+                  CategoryName: "Entrees",
                   Color: "#000000",
                   Recipes: [
                     {
                       ItemId: "ca1b0208-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1802",
+                      RecipeIdentifier: "8005",
                       RecipeName: "STUFFED CHEESE BREADSTICK",
-                      ServingSize: "Each",
-                      GramPerServing: 57,
+                      ServingSize: "2 Each",
+                      GramPerServing: 114.0,
                       Nutrients: [
                         {
                           Name: "Calories",
-                          Value: 140,
+                          Value: 280,
                           HasMissingNutrients: false,
                           Unit: "kcals",
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
-                          Value: 2,
+                          Name: "Total Fat",
+                          Value: 12,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
-                          Value: 270,
+                          Value: 540,
                           HasMissingNutrients: false,
                           Unit: "mg",
                           Abbreviation: "Na"
                         },
                         {
                           Name: "Total Carbohydrate",
-                          Value: 15,
+                          Value: 30,
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [
-                        "f42d3f27-60f9-eb11-a2c3-c84b228403a2",
-                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
-                        "9bf76ff0-2eb7-eb11-a2c4-e816644282bd",
-                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
-                        "22657378-16bf-eb11-a2c3-fc186683ca00"
-                      ],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    }
-                  ]
-                },
-                {
-                  CategoryName: "Grain",
-                  Color: "#000000",
-                  Recipes: [
-                    {
-                      ItemId: "00198642-e4fe-eb11-a2ca-b179136cca43",
-                      RecipeIdentifier: "M-46",
-                      RecipeName: "COOKIE VARIETY",
-                      ServingSize: "Each",
-                      GramPerServing: 42.524249999999995,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 165,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
-                          Value: 2,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 117,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 27,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [
-                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
-                        "f42d3f27-60f9-eb11-a2c3-c84b228403a2",
-                        "1aa13c83-60f9-eb11-a2c3-d9e3a901fe8a",
-                        "95f76ff0-2eb7-eb11-a2c4-e816644282bd",
-                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
-                        "9bf76ff0-2eb7-eb11-a2c4-e816644282bd",
-                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
-                        "22657378-16bf-eb11-a2c3-fc186683ca00"
-                      ],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    }
-                  ]
-                },
-                {
-                  CategoryName: "Vegetable",
-                  Color: "#000000",
-                  Recipes: [
-                    {
-                      ItemId: "30d2fb0d-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1498",
-                      RecipeName: "MARINARA CUP",
-                      ServingSize: "Container",
-                      GramPerServing: 70.87375,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 40,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 200,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 7,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: ["9cf76ff0-2eb7-eb11-a2c4-e816644282bd"],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    },
-                    {
-                      ItemId: "f9d5fb0d-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1830",
-                      RecipeName: "CARROTS- INDV PACKS",
-                      ServingSize: "Package",
-                      GramPerServing: 45.3592,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 19,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 31,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 4,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    }
-                  ]
-                },
-                {
-                  CategoryName: "Fruit",
-                  Color: "#000000",
-                  Recipes: [
-                    {
-                      ItemId: "59d0fb0d-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "9031",
-                      RecipeName: "PEACHES SLICED",
-                      ServingSize: "1/2 cup",
-                      GramPerServing: 124,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 60,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 10,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
+                          Name: "Protein",
                           Value: 14,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    }
-                  ]
-                },
-                {
-                  CategoryName: "Milk",
-                  Color: "#000000",
-                  Recipes: [
-                    {
-                      ItemId: "bfd3fb0d-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1349",
-                      RecipeName: "MILK CHOCOLATE FF CARTON HP",
-                      ServingSize: "Carton",
-                      GramPerServing: 240,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 120,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 180,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 20,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
+                          Abbreviation: "Pro"
                         }
                       ],
                       Allergens: [
-                        "22657378-16bf-eb11-a2c3-fc186683ca00",
+                        "f42d3f27-60f9-eb11-a2c3-c84b228403a2",
                         "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
-                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a"
+                        "9bf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
                       ],
                       ReligiousRestrictions: [],
                       DietaryRestrictions: [
@@ -1901,140 +1260,29 @@ const data = {
                       HasNutrients: true
                     },
                     {
-                      ItemId: "bbd3fb0d-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1315",
-                      RecipeName: "MILK WHITE 1% CARTON HP",
-                      ServingSize: "Carton",
-                      GramPerServing: 236,
+                      ItemId: "bc5a9a87-bd2e-ed11-a805-a6765fdc4a48",
+                      RecipeIdentifier: "M-250",
+                      RecipeName: "HAM CHEESE SANDWICH",
+                      ServingSize: "1 Sandwich",
+                      GramPerServing: 145.20385,
                       Nutrients: [
                         {
                           Name: "Calories",
-                          Value: 110,
+                          Value: 311,
                           HasMissingNutrients: false,
                           Unit: "kcals",
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
-                          Value: 2,
+                          Name: "Total Fat",
+                          Value: 10,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
-                          Value: 130,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 13,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [
-                        "22657378-16bf-eb11-a2c3-fc186683ca00",
-                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    }
-                  ]
-                },
-                {
-                  CategoryName: "Condiment",
-                  Color: "#000000",
-                  Recipes: [
-                    {
-                      ItemId: "781d0208-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1364",
-                      RecipeName: "RANCH CUP",
-                      ServingSize: "Cup",
-                      GramPerServing: 28,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 80,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 2,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 200,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 2,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [
-                        "22657378-16bf-eb11-a2c3-fc186683ca00",
-                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
-                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
-                        "95f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              Date: "9/8/2021",
-              RecipeCategories: [
-                {
-                  CategoryName: "Main Entree",
-                  Color: "#000000",
-                  Recipes: [
-                    {
-                      ItemId: "794eaa45-edbf-eb11-a2c5-93d9907f4527",
-                      RecipeIdentifier: "M-2",
-                      RecipeName: "CHICKEN SANDWICH",
-                      ServingSize: "Each",
-                      GramPerServing: 146.465975,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 340,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 2,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 590,
+                          Value: 783,
                           HasMissingNutrients: false,
                           Unit: "mg",
                           Abbreviation: "Na"
@@ -2045,13 +1293,20 @@ const data = {
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 18,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
                         }
                       ],
                       Allergens: [
-                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
-                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "f42d3f27-60f9-eb11-a2c3-c84b228403a2",
                         "9bf76ff0-2eb7-eb11-a2c4-e816644282bd",
-                        "f42d3f27-60f9-eb11-a2c3-c84b228403a2"
+                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
                       ],
                       ReligiousRestrictions: [],
                       DietaryRestrictions: [],
@@ -2060,148 +1315,53 @@ const data = {
                   ]
                 },
                 {
-                  CategoryName: "Vegetable",
+                  CategoryName: "Condiment",
                   Color: "#000000",
                   Recipes: [
                     {
-                      ItemId: "0135a9d2-a0c4-eb11-a2c7-8fde11d2b38a",
-                      RecipeIdentifier: "9198",
-                      RecipeName: "BEANS VEGETARIAN",
-                      ServingSize: "Cup",
-                      GramPerServing: 260,
+                      ItemId: "03d0fb0d-39bf-eb11-a2c3-a257492f29f5",
+                      RecipeIdentifier: "1775",
+                      RecipeName: "MUSTARD, BULK",
+                      ServingSize: "2 TBSP",
+                      GramPerServing: 30.0,
                       Nutrients: [
                         {
                           Name: "Calories",
-                          Value: 220,
+                          Value: 0,
                           HasMissingNutrients: false,
                           Unit: "kcals",
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
+                          Name: "Total Fat",
                           Value: 0,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
-                          Value: 280,
+                          Value: 330,
                           HasMissingNutrients: false,
                           Unit: "mg",
                           Abbreviation: "Na"
                         },
                         {
                           Name: "Total Carbohydrate",
-                          Value: 40,
+                          Value: 0,
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 0,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
                         }
                       ],
                       Allergens: [],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    }
-                  ]
-                },
-                {
-                  CategoryName: "Fruit",
-                  Color: "#000000",
-                  Recipes: [
-                    {
-                      ItemId: "400b14ce-eae4-eb11-a2c6-bacff064a47c",
-                      RecipeIdentifier: "9037",
-                      RecipeName: "PEARS SLICED",
-                      ServingSize: "1/2 cup",
-                      GramPerServing: 130,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 63,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 5,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 16,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    }
-                  ]
-                },
-                {
-                  CategoryName: "Milk",
-                  Color: "#000000",
-                  Recipes: [
-                    {
-                      ItemId: "bfd3fb0d-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1349",
-                      RecipeName: "MILK CHOCOLATE FF CARTON HP",
-                      ServingSize: "Carton",
-                      GramPerServing: 240,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 120,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 180,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 20,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [
-                        "22657378-16bf-eb11-a2c3-fc186683ca00",
-                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
-                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a"
-                      ],
                       ReligiousRestrictions: [],
                       DietaryRestrictions: [
                         "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
@@ -2209,77 +1369,25 @@ const data = {
                       HasNutrients: true
                     },
                     {
-                      ItemId: "bbd3fb0d-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1315",
-                      RecipeName: "MILK WHITE 1% CARTON HP",
-                      ServingSize: "Carton",
-                      GramPerServing: 236,
+                      ItemId: "a3cffb0d-39bf-eb11-a2c3-a257492f29f5",
+                      RecipeIdentifier: "1641",
+                      RecipeName: "MAYO- KEN'S GALLON",
+                      ServingSize: "1 TBSP",
+                      GramPerServing: 15.0,
                       Nutrients: [
                         {
                           Name: "Calories",
-                          Value: 110,
+                          Value: 40,
                           HasMissingNutrients: false,
                           Unit: "kcals",
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
-                          Value: 2,
+                          Name: "Total Fat",
+                          Value: 4,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 130,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 13,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [
-                        "22657378-16bf-eb11-a2c3-fc186683ca00",
-                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    }
-                  ]
-                },
-                {
-                  CategoryName: "Condiment",
-                  Color: "#000000",
-                  Recipes: [
-                    {
-                      ItemId: "93cffb0d-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1055",
-                      RecipeName: "KETCHUP PACKET",
-                      ServingSize: "Packet",
-                      GramPerServing: 9,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 10,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
@@ -2290,13 +1398,24 @@ const data = {
                         },
                         {
                           Name: "Total Carbohydrate",
-                          Value: 3,
+                          Value: 1,
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 0,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
                         }
                       ],
-                      Allergens: ["837e728a-5ff9-eb11-a2c3-ba13b4b9148a"],
+                      Allergens: [
+                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
+                        "95f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      ],
                       ReligiousRestrictions: [],
                       DietaryRestrictions: [
                         "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
@@ -2304,43 +1423,159 @@ const data = {
                       HasNutrients: true
                     },
                     {
-                      ItemId: "781d0208-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1364",
-                      RecipeName: "RANCH CUP",
-                      ServingSize: "Cup",
-                      GramPerServing: 28,
+                      ItemId: "d840582f-9e5f-ed11-a9a3-bb1b30df1d0d",
+                      RecipeIdentifier: "9040",
+                      RecipeName: "RED ITALIAN DIPPING SAUCE",
+                      ServingSize: "1/4 cup",
+                      GramPerServing: 62.5,
                       Nutrients: [
                         {
                           Name: "Calories",
-                          Value: 80,
+                          Value: 40,
                           HasMissingNutrients: false,
                           Unit: "kcals",
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
+                          Name: "Total Fat",
                           Value: 2,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
-                          Value: 200,
+                          Value: 63,
                           HasMissingNutrients: false,
                           Unit: "mg",
                           Abbreviation: "Na"
                         },
                         {
                           Name: "Total Carbohydrate",
-                          Value: 2,
+                          Value: 5,
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 1,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
                         }
                       ],
                       Allergens: [
-                        "95f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
+                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      ],
+                      ReligiousRestrictions: [],
+                      DietaryRestrictions: [
+                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      ],
+                      HasNutrients: true
+                    },
+                    {
+                      ItemId: "60d0fb0d-39bf-eb11-a2c3-a257492f29f5",
+                      RecipeIdentifier: "1773",
+                      RecipeName: "PICKLES CRINKLE CUT",
+                      ServingSize: "1 oz serving",
+                      GramPerServing: 28.3495,
+                      Nutrients: [
+                        {
+                          Name: "Calories",
+                          Value: 4,
+                          HasMissingNutrients: false,
+                          Unit: "kcals",
+                          Abbreviation: "Cal"
+                        },
+                        {
+                          Name: "Total Fat",
+                          Value: 0,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Fat"
+                        },
+                        {
+                          Name: "Sodium",
+                          Value: 367,
+                          HasMissingNutrients: false,
+                          Unit: "mg",
+                          Abbreviation: "Na"
+                        },
+                        {
+                          Name: "Total Carbohydrate",
+                          Value: 1,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 0,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
+                        }
+                      ],
+                      Allergens: [],
+                      ReligiousRestrictions: [],
+                      DietaryRestrictions: [
+                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      ],
+                      HasNutrients: true
+                    }
+                  ]
+                },
+                {
+                  CategoryName: "Vegetable",
+                  Color: "#000000",
+                  Recipes: [
+                    {
+                      ItemId: "fa7ebf25-24d9-eb11-a2c3-93912f83e3ae",
+                      RecipeIdentifier: "M-15",
+                      RecipeName: "CORN",
+                      ServingSize: "1/2 cup",
+                      GramPerServing: 87.686033333333341,
+                      Nutrients: [
+                        {
+                          Name: "Calories",
+                          Value: 60,
+                          HasMissingNutrients: false,
+                          Unit: "kcals",
+                          Abbreviation: "Cal"
+                        },
+                        {
+                          Name: "Total Fat",
+                          Value: 2,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Fat"
+                        },
+                        {
+                          Name: "Sodium",
+                          Value: 19,
+                          HasMissingNutrients: false,
+                          Unit: "mg",
+                          Abbreviation: "Na"
+                        },
+                        {
+                          Name: "Total Carbohydrate",
+                          Value: 9,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 2,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
+                        }
+                      ],
+                      Allergens: [
+                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
                         "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
                         "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
                         "22657378-16bf-eb11-a2c3-fc186683ca00"
@@ -2354,46 +1589,171 @@ const data = {
                   ]
                 },
                 {
-                  CategoryName: "Extra",
+                  CategoryName: "Milk",
                   Color: "#000000",
                   Recipes: [
                     {
-                      ItemId: "2b9e0a76-81e5-eb11-a2c5-a50ef61f04ec",
-                      RecipeIdentifier: "M-18",
-                      RecipeName: "LETTUCE & PICKLE CUP",
-                      ServingSize: "1/2 cup",
-                      GramPerServing: 7.654368999999999,
+                      ItemId: "bbd3fb0d-39bf-eb11-a2c3-a257492f29f5",
+                      RecipeIdentifier: "1315",
+                      RecipeName: "MILK WHITE 1% CARTON HP",
+                      ServingSize: "Carton",
+                      GramPerServing: 236.0,
                       Nutrients: [
                         {
                           Name: "Calories",
-                          Value: 1,
+                          Value: 110,
                           HasMissingNutrients: false,
                           Unit: "kcals",
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
-                          Value: 0,
+                          Name: "Total Fat",
+                          Value: 2,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
-                          Value: 99,
+                          Value: 130,
                           HasMissingNutrients: false,
                           Unit: "mg",
                           Abbreviation: "Na"
                         },
                         {
                           Name: "Total Carbohydrate",
-                          Value: 0,
+                          Value: 13,
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 8,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
                         }
                       ],
-                      Allergens: [],
+                      Allergens: [
+                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
+                      ],
+                      ReligiousRestrictions: [],
+                      DietaryRestrictions: [
+                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      ],
+                      HasNutrients: true
+                    },
+                    {
+                      ItemId: "bfd3fb0d-39bf-eb11-a2c3-a257492f29f5",
+                      RecipeIdentifier: "1349",
+                      RecipeName: "MILK CHOCOLATE FF CARTON HP",
+                      ServingSize: "Carton",
+                      GramPerServing: 240.0,
+                      Nutrients: [
+                        {
+                          Name: "Calories",
+                          Value: 110,
+                          HasMissingNutrients: false,
+                          Unit: "kcals",
+                          Abbreviation: "Cal"
+                        },
+                        {
+                          Name: "Total Fat",
+                          Value: 0,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Fat"
+                        },
+                        {
+                          Name: "Sodium",
+                          Value: 210,
+                          HasMissingNutrients: false,
+                          Unit: "mg",
+                          Abbreviation: "Na"
+                        },
+                        {
+                          Name: "Total Carbohydrate",
+                          Value: 19,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 8,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
+                        }
+                      ],
+                      Allergens: [
+                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
+                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
+                      ],
+                      ReligiousRestrictions: [],
+                      DietaryRestrictions: [
+                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      ],
+                      HasNutrients: true
+                    }
+                  ]
+                },
+                {
+                  CategoryName: "Fruit",
+                  Color: "#000000",
+                  Recipes: [
+                    {
+                      ItemId: "f2ee4163-a9e8-eb11-a2ca-f5a2bc674b4a",
+                      RecipeIdentifier: "M-32",
+                      RecipeName: "FRUIT VARIETY",
+                      ServingSize: "Each",
+                      GramPerServing: 134.84169133865248,
+                      Nutrients: [
+                        {
+                          Name: "Calories",
+                          Value: 81,
+                          HasMissingNutrients: false,
+                          Unit: "kcals",
+                          Abbreviation: "Cal"
+                        },
+                        {
+                          Name: "Total Fat",
+                          Value: 0,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Fat"
+                        },
+                        {
+                          Name: "Sodium",
+                          Value: 6,
+                          HasMissingNutrients: false,
+                          Unit: "mg",
+                          Abbreviation: "Na"
+                        },
+                        {
+                          Name: "Total Carbohydrate",
+                          Value: 20,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 1,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
+                        }
+                      ],
+                      Allergens: [
+                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
+                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
+                      ],
                       ReligiousRestrictions: [],
                       DietaryRestrictions: [
                         "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
@@ -2405,54 +1765,113 @@ const data = {
               ]
             },
             {
-              Date: "9/9/2021",
+              Date: "1/19/2023",
               RecipeCategories: [
                 {
-                  CategoryName: "Main Entree",
+                  CategoryName: "Entrees",
                   Color: "#000000",
                   Recipes: [
                     {
-                      ItemId: "381c0208-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1703",
-                      RecipeName: "ORANGE CHICKEN",
-                      ServingSize: "4 fl oz spoodle (3.6 oz chicken & sauce)",
-                      GramPerServing: 102.0582,
+                      ItemId: "b2939b90-546e-ec11-ae91-f967b47357bd",
+                      RecipeIdentifier: "M-154",
+                      RecipeName: "CHICKEN ALFREDO ROTINI",
+                      ServingSize: "8.4 oz wt (8 fl oz spoodle)",
+                      GramPerServing: 211.04645555555555,
                       Nutrients: [
                         {
                           Name: "Calories",
-                          Value: 153,
+                          Value: 435,
                           HasMissingNutrients: false,
                           Unit: "kcals",
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
-                          Value: 1,
+                          Name: "Total Fat",
+                          Value: 15,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
-                          Value: 286,
+                          Value: 937,
                           HasMissingNutrients: false,
                           Unit: "mg",
                           Abbreviation: "Na"
                         },
                         {
                           Name: "Total Carbohydrate",
-                          Value: 19,
+                          Value: 51,
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 29,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
                         }
                       ],
                       Allergens: [
                         "f42d3f27-60f9-eb11-a2c3-c84b228403a2",
-                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
-                        "95f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
                         "9bf76ff0-2eb7-eb11-a2c4-e816644282bd",
-                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd"
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
+                      ],
+                      ReligiousRestrictions: [],
+                      DietaryRestrictions: [],
+                      HasNutrients: true
+                    },
+                    {
+                      ItemId: "f08bcfcd-c22e-ed11-a805-cf49f1b02111",
+                      RecipeIdentifier: "M-251",
+                      RecipeName: "TURKEY CHEESE SANDWICH",
+                      ServingSize: "1 Sandwich",
+                      GramPerServing: 150.87375,
+                      Nutrients: [
+                        {
+                          Name: "Calories",
+                          Value: 305,
+                          HasMissingNutrients: false,
+                          Unit: "kcals",
+                          Abbreviation: "Cal"
+                        },
+                        {
+                          Name: "Total Fat",
+                          Value: 7,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Fat"
+                        },
+                        {
+                          Name: "Sodium",
+                          Value: 865,
+                          HasMissingNutrients: false,
+                          Unit: "mg",
+                          Abbreviation: "Na"
+                        },
+                        {
+                          Name: "Total Carbohydrate",
+                          Value: 39,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 19,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
+                        }
+                      ],
+                      Allergens: [
+                        "f42d3f27-60f9-eb11-a2c3-c84b228403a2",
+                        "9bf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
                       ],
                       ReligiousRestrictions: [],
                       DietaryRestrictions: [],
@@ -2461,43 +1880,154 @@ const data = {
                   ]
                 },
                 {
-                  CategoryName: "Grain",
+                  CategoryName: "Condiment",
                   Color: "#000000",
                   Recipes: [
                     {
-                      ItemId: "4accb7a4-5ee6-eb11-a2c9-c59ac59649a5",
-                      RecipeIdentifier: "M-28",
-                      RecipeName: "BROWN RICE",
-                      ServingSize: "1/2 cup",
-                      GramPerServing: 30.016191666666668,
+                      ItemId: "03d0fb0d-39bf-eb11-a2c3-a257492f29f5",
+                      RecipeIdentifier: "1775",
+                      RecipeName: "MUSTARD, BULK",
+                      ServingSize: "2 TBSP",
+                      GramPerServing: 30.0,
                       Nutrients: [
                         {
                           Name: "Calories",
-                          Value: 104,
+                          Value: 0,
                           HasMissingNutrients: false,
                           Unit: "kcals",
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
+                          Name: "Total Fat",
                           Value: 0,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
-                          Value: 0,
+                          Value: 330,
                           HasMissingNutrients: false,
                           Unit: "mg",
                           Abbreviation: "Na"
                         },
                         {
                           Name: "Total Carbohydrate",
-                          Value: 21,
+                          Value: 0,
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 0,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
+                        }
+                      ],
+                      Allergens: [],
+                      ReligiousRestrictions: [],
+                      DietaryRestrictions: [
+                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      ],
+                      HasNutrients: true
+                    },
+                    {
+                      ItemId: "a3cffb0d-39bf-eb11-a2c3-a257492f29f5",
+                      RecipeIdentifier: "1641",
+                      RecipeName: "MAYO- KEN'S GALLON",
+                      ServingSize: "1 TBSP",
+                      GramPerServing: 15.0,
+                      Nutrients: [
+                        {
+                          Name: "Calories",
+                          Value: 40,
+                          HasMissingNutrients: false,
+                          Unit: "kcals",
+                          Abbreviation: "Cal"
+                        },
+                        {
+                          Name: "Total Fat",
+                          Value: 4,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Fat"
+                        },
+                        {
+                          Name: "Sodium",
+                          Value: 95,
+                          HasMissingNutrients: false,
+                          Unit: "mg",
+                          Abbreviation: "Na"
+                        },
+                        {
+                          Name: "Total Carbohydrate",
+                          Value: 1,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 0,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
+                        }
+                      ],
+                      Allergens: [
+                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
+                        "95f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      ],
+                      ReligiousRestrictions: [],
+                      DietaryRestrictions: [
+                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      ],
+                      HasNutrients: true
+                    },
+                    {
+                      ItemId: "60d0fb0d-39bf-eb11-a2c3-a257492f29f5",
+                      RecipeIdentifier: "1773",
+                      RecipeName: "PICKLES CRINKLE CUT",
+                      ServingSize: "1 oz serving",
+                      GramPerServing: 28.3495,
+                      Nutrients: [
+                        {
+                          Name: "Calories",
+                          Value: 4,
+                          HasMissingNutrients: false,
+                          Unit: "kcals",
+                          Abbreviation: "Cal"
+                        },
+                        {
+                          Name: "Total Fat",
+                          Value: 0,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Fat"
+                        },
+                        {
+                          Name: "Sodium",
+                          Value: 367,
+                          HasMissingNutrients: false,
+                          Unit: "mg",
+                          Abbreviation: "Na"
+                        },
+                        {
+                          Name: "Total Carbohydrate",
+                          Value: 1,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 0,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
                         }
                       ],
                       Allergens: [],
@@ -2522,31 +2052,38 @@ const data = {
                       Nutrients: [
                         {
                           Name: "Calories",
-                          Value: 38,
+                          Value: 33,
                           HasMissingNutrients: false,
                           Unit: "kcals",
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
-                          Value: 1,
+                          Name: "Total Fat",
+                          Value: 2,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
-                          Value: 158,
+                          Value: 138,
                           HasMissingNutrients: false,
                           Unit: "mg",
                           Abbreviation: "Na"
                         },
                         {
                           Name: "Total Carbohydrate",
-                          Value: 4,
+                          Value: 3,
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 1,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
                         }
                       ],
                       Allergens: [
@@ -2563,111 +2100,15 @@ const data = {
                   ]
                 },
                 {
-                  CategoryName: "Fruit",
-                  Color: "#000000",
-                  Recipes: [
-                    {
-                      ItemId: "fed3fb0d-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1796",
-                      RecipeName: "APPLE",
-                      ServingSize: "Apple",
-                      GramPerServing: 100,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 52,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 1,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 14,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    }
-                  ]
-                },
-                {
                   CategoryName: "Milk",
                   Color: "#000000",
                   Recipes: [
-                    {
-                      ItemId: "bfd3fb0d-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1349",
-                      RecipeName: "MILK CHOCOLATE FF CARTON HP",
-                      ServingSize: "Carton",
-                      GramPerServing: 240,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 120,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 180,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 20,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [
-                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
-                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
-                        "22657378-16bf-eb11-a2c3-fc186683ca00"
-                      ],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    },
                     {
                       ItemId: "bbd3fb0d-39bf-eb11-a2c3-a257492f29f5",
                       RecipeIdentifier: "1315",
                       RecipeName: "MILK WHITE 1% CARTON HP",
                       ServingSize: "Carton",
-                      GramPerServing: 236,
+                      GramPerServing: 236.0,
                       Nutrients: [
                         {
                           Name: "Calories",
@@ -2677,11 +2118,11 @@ const data = {
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
+                          Name: "Total Fat",
                           Value: 2,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
@@ -2696,10 +2137,132 @@ const data = {
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 8,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
                         }
                       ],
                       Allergens: [
                         "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
+                      ],
+                      ReligiousRestrictions: [],
+                      DietaryRestrictions: [
+                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      ],
+                      HasNutrients: true
+                    },
+                    {
+                      ItemId: "bfd3fb0d-39bf-eb11-a2c3-a257492f29f5",
+                      RecipeIdentifier: "1349",
+                      RecipeName: "MILK CHOCOLATE FF CARTON HP",
+                      ServingSize: "Carton",
+                      GramPerServing: 240.0,
+                      Nutrients: [
+                        {
+                          Name: "Calories",
+                          Value: 110,
+                          HasMissingNutrients: false,
+                          Unit: "kcals",
+                          Abbreviation: "Cal"
+                        },
+                        {
+                          Name: "Total Fat",
+                          Value: 0,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Fat"
+                        },
+                        {
+                          Name: "Sodium",
+                          Value: 210,
+                          HasMissingNutrients: false,
+                          Unit: "mg",
+                          Abbreviation: "Na"
+                        },
+                        {
+                          Name: "Total Carbohydrate",
+                          Value: 19,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 8,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
+                        }
+                      ],
+                      Allergens: [
+                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
+                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
+                      ],
+                      ReligiousRestrictions: [],
+                      DietaryRestrictions: [
+                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      ],
+                      HasNutrients: true
+                    }
+                  ]
+                },
+                {
+                  CategoryName: "Fruit",
+                  Color: "#000000",
+                  Recipes: [
+                    {
+                      ItemId: "f2ee4163-a9e8-eb11-a2ca-f5a2bc674b4a",
+                      RecipeIdentifier: "M-32",
+                      RecipeName: "FRUIT VARIETY",
+                      ServingSize: "Each",
+                      GramPerServing: 134.84169133865248,
+                      Nutrients: [
+                        {
+                          Name: "Calories",
+                          Value: 81,
+                          HasMissingNutrients: false,
+                          Unit: "kcals",
+                          Abbreviation: "Cal"
+                        },
+                        {
+                          Name: "Total Fat",
+                          Value: 0,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Fat"
+                        },
+                        {
+                          Name: "Sodium",
+                          Value: 6,
+                          HasMissingNutrients: false,
+                          Unit: "mg",
+                          Abbreviation: "Na"
+                        },
+                        {
+                          Name: "Total Carbohydrate",
+                          Value: 20,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 1,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
+                        }
+                      ],
+                      Allergens: [
+                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
+                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
                         "22657378-16bf-eb11-a2c3-fc186683ca00"
                       ],
                       ReligiousRestrictions: [],
@@ -2713,36 +2276,207 @@ const data = {
               ]
             },
             {
-              Date: "9/10/2021",
+              Date: "1/20/2023",
               RecipeCategories: [
                 {
-                  CategoryName: "Main Entree",
+                  CategoryName: "Entrees",
                   Color: "#000000",
                   Recipes: [
                     {
-                      ItemId: "e31a915c-f3bf-eb11-a2c5-b11bab3c9d76",
-                      RecipeIdentifier: "M-4",
-                      RecipeName: "HAMBURGER",
+                      ItemId: "5b987943-6f51-ed11-9b14-a398c162ce2a",
+                      RecipeIdentifier: "M-319",
+                      RecipeName: "LOVEABLE LUNCH W/ CHOC CHUNK COOKIE",
                       ServingSize: "Each",
-                      GramPerServing: 117.24,
+                      GramPerServing: 110.84704500000001,
                       Nutrients: [
                         {
                           Name: "Calories",
-                          Value: 310,
+                          Value: 279,
                           HasMissingNutrients: false,
                           Unit: "kcals",
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
-                          Value: 6,
+                          Name: "Total Fat",
+                          Value: 9,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
-                          Value: 347,
+                          Value: 744,
+                          HasMissingNutrients: false,
+                          Unit: "mg",
+                          Abbreviation: "Na"
+                        },
+                        {
+                          Name: "Total Carbohydrate",
+                          Value: 35,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 16,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
+                        }
+                      ],
+                      Allergens: [
+                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
+                        "f42d3f27-60f9-eb11-a2c3-c84b228403a2",
+                        "95f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9bf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
+                      ],
+                      ReligiousRestrictions: [],
+                      DietaryRestrictions: [],
+                      HasNutrients: true
+                    },
+                    {
+                      ItemId: "a9e2e4a0-6e51-ed11-9b14-e2fc48ffefc2",
+                      RecipeIdentifier: "M-317",
+                      RecipeName: "LOVEABLE LUNCH W/ SNICKERDOODLE COOKIE",
+                      ServingSize: "Each",
+                      GramPerServing: 110.84704499999998,
+                      Nutrients: [
+                        {
+                          Name: "Calories",
+                          Value: 279,
+                          HasMissingNutrients: false,
+                          Unit: "kcals",
+                          Abbreviation: "Cal"
+                        },
+                        {
+                          Name: "Total Fat",
+                          Value: 9,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Fat"
+                        },
+                        {
+                          Name: "Sodium",
+                          Value: 744,
+                          HasMissingNutrients: false,
+                          Unit: "mg",
+                          Abbreviation: "Na"
+                        },
+                        {
+                          Name: "Total Carbohydrate",
+                          Value: 35,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 16,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
+                        }
+                      ],
+                      Allergens: [
+                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
+                        "f42d3f27-60f9-eb11-a2c3-c84b228403a2",
+                        "95f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9bf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
+                      ],
+                      ReligiousRestrictions: [],
+                      DietaryRestrictions: [],
+                      HasNutrients: true
+                    },
+                    {
+                      ItemId: "bc5a9a87-bd2e-ed11-a805-a6765fdc4a48",
+                      RecipeIdentifier: "M-250",
+                      RecipeName: "HAM CHEESE SANDWICH",
+                      ServingSize: "1 Sandwich",
+                      GramPerServing: 145.20385,
+                      Nutrients: [
+                        {
+                          Name: "Calories",
+                          Value: 311,
+                          HasMissingNutrients: false,
+                          Unit: "kcals",
+                          Abbreviation: "Cal"
+                        },
+                        {
+                          Name: "Total Fat",
+                          Value: 10,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Fat"
+                        },
+                        {
+                          Name: "Sodium",
+                          Value: 783,
+                          HasMissingNutrients: false,
+                          Unit: "mg",
+                          Abbreviation: "Na"
+                        },
+                        {
+                          Name: "Total Carbohydrate",
+                          Value: 40,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 18,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
+                        }
+                      ],
+                      Allergens: [
+                        "f42d3f27-60f9-eb11-a2c3-c84b228403a2",
+                        "9bf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
+                      ],
+                      ReligiousRestrictions: [],
+                      DietaryRestrictions: [],
+                      HasNutrients: true
+                    }
+                  ]
+                },
+                {
+                  CategoryName: "Extra",
+                  Color: "#000000",
+                  Recipes: [
+                    {
+                      ItemId: "cf1c0208-39bf-eb11-a2c3-a257492f29f5",
+                      RecipeIdentifier: "1628",
+                      RecipeName: "COOKIE - CHOCOLATE CHIP",
+                      ServingSize: "Each",
+                      GramPerServing: 42.524249999999995,
+                      Nutrients: [
+                        {
+                          Name: "Calories",
+                          Value: 160,
+                          HasMissingNutrients: false,
+                          Unit: "kcals",
+                          Abbreviation: "Cal"
+                        },
+                        {
+                          Name: "Total Fat",
+                          Value: 5,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Fat"
+                        },
+                        {
+                          Name: "Sodium",
+                          Value: 105,
                           HasMissingNutrients: false,
                           Unit: "mg",
                           Abbreviation: "Na"
@@ -2753,14 +2487,78 @@ const data = {
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 2,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
+                        }
+                      ],
+                      Allergens: [
+                        "95f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9bf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
+                      ],
+                      ReligiousRestrictions: [],
+                      DietaryRestrictions: [
+                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      ],
+                      HasNutrients: true
+                    },
+                    {
+                      ItemId: "88e31611-62fd-ec11-a7e3-c31d1f681de0",
+                      RecipeIdentifier: "1319",
+                      RecipeName: "COOKIE-SNICKERDOODLE",
+                      ServingSize: "Each",
+                      GramPerServing: 25.51455,
+                      Nutrients: [
+                        {
+                          Name: "Calories",
+                          Value: 104,
+                          HasMissingNutrients: false,
+                          Unit: "kcals",
+                          Abbreviation: "Cal"
+                        },
+                        {
+                          Name: "Total Fat",
+                          Value: 4,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Fat"
+                        },
+                        {
+                          Name: "Sodium",
+                          Value: 69,
+                          HasMissingNutrients: false,
+                          Unit: "mg",
+                          Abbreviation: "Na"
+                        },
+                        {
+                          Name: "Total Carbohydrate",
+                          Value: 16,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 1,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
                         }
                       ],
                       Allergens: [
                         "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
-                        "3b600e8d-16bf-eb11-a2c3-c61aac482cb3",
                         "f42d3f27-60f9-eb11-a2c3-c84b228403a2",
+                        "95f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
                         "9bf76ff0-2eb7-eb11-a2c4-e816644282bd",
-                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd"
+                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
                       ],
                       ReligiousRestrictions: [],
                       DietaryRestrictions: [],
@@ -2769,33 +2567,83 @@ const data = {
                   ]
                 },
                 {
-                  CategoryName: "Vegetable",
+                  CategoryName: "Condiment",
                   Color: "#000000",
                   Recipes: [
                     {
-                      ItemId: "94d48e00-54e6-eb11-a2c9-d2abdd85801a",
-                      RecipeIdentifier: "M-27",
-                      RecipeName: "GARDEN SALAD",
-                      ServingSize: "Cup",
-                      GramPerServing: 36.287392,
+                      ItemId: "03d0fb0d-39bf-eb11-a2c3-a257492f29f5",
+                      RecipeIdentifier: "1775",
+                      RecipeName: "MUSTARD, BULK",
+                      ServingSize: "2 TBSP",
+                      GramPerServing: 30.0,
                       Nutrients: [
                         {
                           Name: "Calories",
-                          Value: 6,
+                          Value: 0,
                           HasMissingNutrients: false,
                           Unit: "kcals",
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
+                          Name: "Total Fat",
                           Value: 0,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
-                          Value: 8,
+                          Value: 330,
+                          HasMissingNutrients: false,
+                          Unit: "mg",
+                          Abbreviation: "Na"
+                        },
+                        {
+                          Name: "Total Carbohydrate",
+                          Value: 0,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 0,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
+                        }
+                      ],
+                      Allergens: [],
+                      ReligiousRestrictions: [],
+                      DietaryRestrictions: [
+                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      ],
+                      HasNutrients: true
+                    },
+                    {
+                      ItemId: "a3cffb0d-39bf-eb11-a2c3-a257492f29f5",
+                      RecipeIdentifier: "1641",
+                      RecipeName: "MAYO- KEN'S GALLON",
+                      ServingSize: "1 TBSP",
+                      GramPerServing: 15.0,
+                      Nutrients: [
+                        {
+                          Name: "Calories",
+                          Value: 40,
+                          HasMissingNutrients: false,
+                          Unit: "kcals",
+                          Abbreviation: "Cal"
+                        },
+                        {
+                          Name: "Total Fat",
+                          Value: 4,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Fat"
+                        },
+                        {
+                          Name: "Sodium",
+                          Value: 95,
                           HasMissingNutrients: false,
                           Unit: "mg",
                           Abbreviation: "Na"
@@ -2806,6 +2654,67 @@ const data = {
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 0,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
+                        }
+                      ],
+                      Allergens: [
+                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
+                        "95f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "9cf76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      ],
+                      ReligiousRestrictions: [],
+                      DietaryRestrictions: [
+                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      ],
+                      HasNutrients: true
+                    },
+                    {
+                      ItemId: "60d0fb0d-39bf-eb11-a2c3-a257492f29f5",
+                      RecipeIdentifier: "1773",
+                      RecipeName: "PICKLES CRINKLE CUT",
+                      ServingSize: "1 oz serving",
+                      GramPerServing: 28.3495,
+                      Nutrients: [
+                        {
+                          Name: "Calories",
+                          Value: 4,
+                          HasMissingNutrients: false,
+                          Unit: "kcals",
+                          Abbreviation: "Cal"
+                        },
+                        {
+                          Name: "Total Fat",
+                          Value: 0,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Fat"
+                        },
+                        {
+                          Name: "Sodium",
+                          Value: 367,
+                          HasMissingNutrients: false,
+                          Unit: "mg",
+                          Abbreviation: "Na"
+                        },
+                        {
+                          Name: "Total Carbohydrate",
+                          Value: 1,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 0,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
                         }
                       ],
                       Allergens: [],
@@ -2818,43 +2727,50 @@ const data = {
                   ]
                 },
                 {
-                  CategoryName: "Fruit",
+                  CategoryName: "Vegetable",
                   Color: "#000000",
                   Recipes: [
                     {
-                      ItemId: "7fe2d599-73d4-eb11-a2c4-fe8cb6dc41e6",
-                      RecipeIdentifier: "1841",
-                      RecipeName: "PEACH CUP ZEE ZEE",
-                      ServingSize: "Each",
-                      GramPerServing: 127.57275,
+                      ItemId: "c9d6fb0d-39bf-eb11-a2c3-a257492f29f5",
+                      RecipeIdentifier: "9064",
+                      RecipeName: "*CARROTS BABY PEELED",
+                      ServingSize: "1/2 cup",
+                      GramPerServing: 69.46,
                       Nutrients: [
                         {
                           Name: "Calories",
-                          Value: 70,
+                          Value: 24,
                           HasMissingNutrients: false,
                           Unit: "kcals",
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
+                          Name: "Total Fat",
                           Value: 0,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
-                          Value: 10,
+                          Value: 54,
                           HasMissingNutrients: false,
                           Unit: "mg",
                           Abbreviation: "Na"
                         },
                         {
                           Name: "Total Carbohydrate",
-                          Value: 18,
+                          Value: 6,
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 0,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
                         }
                       ],
                       Allergens: [],
@@ -2871,58 +2787,11 @@ const data = {
                   Color: "#000000",
                   Recipes: [
                     {
-                      ItemId: "bfd3fb0d-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1349",
-                      RecipeName: "MILK CHOCOLATE FF CARTON HP",
-                      ServingSize: "Carton",
-                      GramPerServing: 240,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 120,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 180,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 20,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [
-                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
-                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
-                        "22657378-16bf-eb11-a2c3-fc186683ca00"
-                      ],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    },
-                    {
                       ItemId: "bbd3fb0d-39bf-eb11-a2c3-a257492f29f5",
                       RecipeIdentifier: "1315",
                       RecipeName: "MILK WHITE 1% CARTON HP",
                       ServingSize: "Carton",
-                      GramPerServing: 236,
+                      GramPerServing: 236.0,
                       Nutrients: [
                         {
                           Name: "Calories",
@@ -2932,11 +2801,11 @@ const data = {
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
+                          Name: "Total Fat",
                           Value: 2,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
@@ -2951,9 +2820,124 @@ const data = {
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 8,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
                         }
                       ],
                       Allergens: [
+                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
+                      ],
+                      ReligiousRestrictions: [],
+                      DietaryRestrictions: [
+                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      ],
+                      HasNutrients: true
+                    },
+                    {
+                      ItemId: "bfd3fb0d-39bf-eb11-a2c3-a257492f29f5",
+                      RecipeIdentifier: "1349",
+                      RecipeName: "MILK CHOCOLATE FF CARTON HP",
+                      ServingSize: "Carton",
+                      GramPerServing: 240.0,
+                      Nutrients: [
+                        {
+                          Name: "Calories",
+                          Value: 110,
+                          HasMissingNutrients: false,
+                          Unit: "kcals",
+                          Abbreviation: "Cal"
+                        },
+                        {
+                          Name: "Total Fat",
+                          Value: 0,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Fat"
+                        },
+                        {
+                          Name: "Sodium",
+                          Value: 210,
+                          HasMissingNutrients: false,
+                          Unit: "mg",
+                          Abbreviation: "Na"
+                        },
+                        {
+                          Name: "Total Carbohydrate",
+                          Value: 19,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 8,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
+                        }
+                      ],
+                      Allergens: [
+                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
+                        "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "22657378-16bf-eb11-a2c3-fc186683ca00"
+                      ],
+                      ReligiousRestrictions: [],
+                      DietaryRestrictions: [
+                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
+                      ],
+                      HasNutrients: true
+                    },
+                    {
+                      ItemId: "c0d12c26-c72e-ed11-a805-cf49f1b02111",
+                      RecipeIdentifier: "1483",
+                      RecipeName: "MILK STRAWBERRY FF CARTON HP",
+                      ServingSize: "Carton",
+                      GramPerServing: 240.0,
+                      Nutrients: [
+                        {
+                          Name: "Calories",
+                          Value: 110,
+                          HasMissingNutrients: false,
+                          Unit: "kcals",
+                          Abbreviation: "Cal"
+                        },
+                        {
+                          Name: "Total Fat",
+                          Value: 0,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Fat"
+                        },
+                        {
+                          Name: "Sodium",
+                          Value: 125,
+                          HasMissingNutrients: false,
+                          Unit: "mg",
+                          Abbreviation: "Na"
+                        },
+                        {
+                          Name: "Total Carbohydrate",
+                          Value: 19,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Carb"
+                        },
+                        {
+                          Name: "Protein",
+                          Value: 8,
+                          HasMissingNutrients: false,
+                          Unit: "g",
+                          Abbreviation: "Pro"
+                        }
+                      ],
+                      Allergens: [
+                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
                         "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
                         "22657378-16bf-eb11-a2c3-fc186683ca00"
                       ],
@@ -2966,133 +2950,54 @@ const data = {
                   ]
                 },
                 {
-                  CategoryName: "Condiment",
+                  CategoryName: "Fruit",
                   Color: "#000000",
                   Recipes: [
                     {
-                      ItemId: "93cffb0d-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1055",
-                      RecipeName: "KETCHUP PACKET",
-                      ServingSize: "Packet",
-                      GramPerServing: 9,
+                      ItemId: "f2ee4163-a9e8-eb11-a2ca-f5a2bc674b4a",
+                      RecipeIdentifier: "M-32",
+                      RecipeName: "FRUIT VARIETY",
+                      ServingSize: "Each",
+                      GramPerServing: 134.84169133865248,
                       Nutrients: [
                         {
                           Name: "Calories",
-                          Value: 10,
+                          Value: 81,
                           HasMissingNutrients: false,
                           Unit: "kcals",
                           Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
+                          Name: "Total Fat",
                           Value: 0,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
+                          Abbreviation: "Fat"
                         },
                         {
                           Name: "Sodium",
-                          Value: 95,
+                          Value: 6,
                           HasMissingNutrients: false,
                           Unit: "mg",
                           Abbreviation: "Na"
                         },
                         {
                           Name: "Total Carbohydrate",
-                          Value: 3,
+                          Value: 20,
                           HasMissingNutrients: false,
                           Unit: "g",
                           Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: ["837e728a-5ff9-eb11-a2c3-ba13b4b9148a"],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    },
-                    {
-                      ItemId: "eecffb0d-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1524",
-                      RecipeName: "MUSTARD PACKET",
-                      ServingSize: "Packet",
-                      GramPerServing: 5.5,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 4,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
                         },
                         {
-                          Name: "Saturated Fat",
-                          Value: 0,
+                          Name: "Protein",
+                          Value: 1,
                           HasMissingNutrients: false,
                           Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 86,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    },
-                    {
-                      ItemId: "781d0208-39bf-eb11-a2c3-a257492f29f5",
-                      RecipeIdentifier: "1364",
-                      RecipeName: "RANCH CUP",
-                      ServingSize: "Cup",
-                      GramPerServing: 28,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 80,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 2,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 200,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 2,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
+                          Abbreviation: "Pro"
                         }
                       ],
                       Allergens: [
-                        "95f76ff0-2eb7-eb11-a2c4-e816644282bd",
+                        "837e728a-5ff9-eb11-a2c3-ba13b4b9148a",
                         "96f76ff0-2eb7-eb11-a2c4-e816644282bd",
                         "9cf76ff0-2eb7-eb11-a2c4-e816644282bd",
                         "22657378-16bf-eb11-a2c3-fc186683ca00"
@@ -3104,74 +3009,23 @@ const data = {
                       HasNutrients: true
                     }
                   ]
-                },
-                {
-                  CategoryName: "Extra",
-                  Color: "#000000",
-                  Recipes: [
-                    {
-                      ItemId: "2b9e0a76-81e5-eb11-a2c5-a50ef61f04ec",
-                      RecipeIdentifier: "M-18",
-                      RecipeName: "LETTUCE & PICKLE CUP",
-                      ServingSize: "1/2 cup",
-                      GramPerServing: 7.654368999999999,
-                      Nutrients: [
-                        {
-                          Name: "Calories",
-                          Value: 1,
-                          HasMissingNutrients: false,
-                          Unit: "kcals",
-                          Abbreviation: "Cal"
-                        },
-                        {
-                          Name: "Saturated Fat",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Sfat"
-                        },
-                        {
-                          Name: "Sodium",
-                          Value: 99,
-                          HasMissingNutrients: false,
-                          Unit: "mg",
-                          Abbreviation: "Na"
-                        },
-                        {
-                          Name: "Total Carbohydrate",
-                          Value: 0,
-                          HasMissingNutrients: false,
-                          Unit: "g",
-                          Abbreviation: "Carb"
-                        }
-                      ],
-                      Allergens: [],
-                      ReligiousRestrictions: [],
-                      DietaryRestrictions: [
-                        "a1f76ff0-2eb7-eb11-a2c4-e816644282bd"
-                      ],
-                      HasNutrients: true
-                    }
-                  ]
                 }
               ]
             }
           ],
-          AcademicCalenderId: "300f4540-8bc4-eb11-a2c7-8fde11d2b38a"
+          AcademicCalenderId: "d6c848b7-7daf-ec11-8e0e-db5f3ed28680"
         }
       ]
     }
   ],
   AcademicCalendars: [
     {
-      AcademicCalendarId: "300f4540-8bc4-eb11-a2c7-8fde11d2b38a",
-      Days: [{ Date: "9/6/2021", Note: "Labor Day" }]
-    },
-    {
-      AcademicCalendarId: "8249c7a1-7de5-eb11-a2c5-ad7a513cdd3b",
-      Days: [{ Date: "9/6/2021", Note: "Labor Day" }]
+      AcademicCalendarId: "d6c848b7-7daf-ec11-8e0e-db5f3ed28680",
+      Days: [
+        { Date: "1/16/2023", Note: "MLK/Human Rights" },
+        { Date: "1/17/2023", Note: "No School All Grades/Teacher Prep" }
+      ]
     }
   ]
 };
-
 module.exports = data;

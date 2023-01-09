@@ -16,13 +16,16 @@ class TitanSchoolsClient {
       );
     }
 
+    this.debug = config.debug === true ? true : false;
+
     this.requestParams = {
       buildingId: config.buildingId,
       districtId: config.districtId
     };
 
     this.recipeCategoriesToInclude = config.recipeCategoriesToInclude ?? [
-      "Main Entree",
+      "Main Entree", // Maybe deprecated?
+      "Entrees",
       "Grain"
       // , "Fruit"
       // , "Vegetable"
@@ -33,22 +36,22 @@ class TitanSchoolsClient {
 
     this.client = axios.create({
       baseURL: "https://family.titank12.com/api/",
-      timeout: 8000
+      timeout: 30000
     });
   }
 
   async fetchMockMenu() {
-    const data = require("./test/mocks/mockApiResponse");
+    const data = require("./test/unit/mocks/mockApiResponse");
     return this.processData(data);
   }
 
   /**
    * Fetches menu data from the TitanSchools API and formats it as shown below
    *
-   * @param string startDate
+   * @param Date startDate (Optional) A Date object that specifies which day the menu should start on
    * @throws Error If the TitanSchools API responds with a 400- or 500-level HTTP status
    *
-   * @returns An array of meals shaped like this:
+   * @returns An array of meals shaped like this (starting on {startDate} and including {config.numberOfDaysToDisplay} days):
    * [
    *   { "date": "9-6-2021", "label": "Today" },
    *   {
@@ -80,19 +83,28 @@ class TitanSchoolsClient {
   async fetchMenu(startDate = null) {
     let params = {
       ...this.requestParams,
-      startDate
-    };
-
-    if (startDate === null) {
-      console.log("Using today as startDate");
       // If no startDate was provided, use today's date
       // API requires date to be formatted as: m-d-Y (i.e. 12-5-2021)
-      const now = new Date();
-      params.startDate = `${
-        now.getMonth() + 1 // javascript month is 0-indexed :facepalm:
-      }-${now.getDate()}-${now.getFullYear()}`;
-    } else {
-      console.log(`Using ${startDate} as startDate`);
+      startDate: this.formatDate(startDate ?? new Date())
+    };
+
+    if (this.debug) {
+      if (startDate === null) {
+        console.debug("Using today as startDate");
+      } else {
+        console.debug(`Using ${startDate} as startDate`);
+      }
+
+      // Log the outbound API request
+      this.client.interceptors.request.use((request) => {
+        console.debug(
+          `Sending API request: ${JSON.stringify({
+            url: request.url,
+            params: request.params
+          })}`
+        );
+        return request;
+      });
     }
 
     try {
@@ -118,23 +130,74 @@ class TitanSchoolsClient {
     }
   }
 
-  processData(data) {
-    const menus = data.FamilyMenuSessions.map((menuSession) => {
+  /**
+   *
+   * @param Date dateObject A Date object
+   * @returns string A date string formatted as m-d-Y (1-9-2023)
+   */
+  formatDate(dateObject) {
+    return `${
+      dateObject.getMonth() + 1 // javascript month is 0-indexed :facepalm:
+    }-${dateObject.getDate()}-${dateObject.getFullYear()}`;
+  }
+
+  /**
+   * Takes in a raw response body from the TitanSchools API and outputs a normalized array of menus by date.
+   * Since the TitanSchools API has the potential to change without warning, this function will isolate breaking
+   * API changes and output normalized data that the rest of the functions can assume to be correct.
+   *
+   * @param Object apiResponse The response body from the TitanSchools API.
+   */
+  extractMenusByDate(apiResponse) {
+    const menus = apiResponse.FamilyMenuSessions.map((menuSession) => {
       // The titank12 API has several possible values for the ServingSession,
       // including "Breakfast", "Lunch", "Seamless Summer Lunch", "Seamless Summer Breakfast".
       const breakfastOrLunch = menuSession.ServingSession.match(/breakfast/i)
         ? "breakfast"
         : "lunch";
+
       const menusByDate = menuSession.MenuPlans[0].Days.map(
         (menuForThisDate) => {
+          // Just for logging/troubleshooting, keep track of all the recipes in this menu and note which ones get
+          // intentionally filtered out.
+          const recipesToLog = {
+            all: [],
+            filteredOut: []
+          };
+
+          const recipeCategories = menuForThisDate.RecipeCategories.filter(
+            (recipeCategory) => {
+              recipesToLog.all.push(recipeCategory.CategoryName);
+
+              if (
+                this.recipeCategoriesToInclude.includes(
+                  recipeCategory.CategoryName
+                )
+              ) {
+                return true;
+              } else {
+                recipesToLog.filteredOut.push(recipeCategory.CategoryName);
+                return false;
+              }
+            }
+          );
+
+          if (this.debug) {
+            console.debug(
+              `The ${breakfastOrLunch} menu for ${
+                menuForThisDate.Date
+              } contains the following categories: ${recipesToLog.all.join(
+                ", "
+              )}, but ${recipesToLog.filteredOut.join(
+                ", "
+              )} were filtered out because they're not included in the config.recipeCategoriesToInclude array.`
+            );
+          }
+
           return {
             date: menuForThisDate.Date,
             breakfastOrLunch,
-            menu: menuForThisDate.RecipeCategories.filter((recipeCategory) =>
-              this.recipeCategoriesToInclude.includes(
-                recipeCategory.CategoryName
-              )
-            )
+            menu: recipeCategories
               .map((recipeCategory) => {
                 return recipeCategory.Recipes.map(
                   (recipe) => recipe.RecipeName
@@ -147,6 +210,20 @@ class TitanSchoolsClient {
 
       return menusByDate;
     });
+
+    if (this.debug) {
+      console.debug(
+        `Menus extracted from the TitanSchools API response: ${JSON.stringify(
+          menus
+        )}`
+      );
+    }
+
+    return menus;
+  }
+
+  processData(data) {
+    const menus = this.extractMenusByDate(data);
 
     const upcomingMenuByDate = upcomingRelativeDates().map((day) => {
       // day = { date: '9-6-2021', label: 'Today' }; // Possible labels: 'Today', 'Tomorrow', or a day of the week
