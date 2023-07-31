@@ -35,7 +35,7 @@ class TitanSchoolsClient {
     ];
 
     this.client = axios.create({
-      baseURL: "https://family.titank12.com/api/",
+      baseURL: "https://api.linqconnect.com/api/",
       timeout: 30000
     });
   }
