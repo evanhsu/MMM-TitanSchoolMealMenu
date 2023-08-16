@@ -16,17 +16,17 @@ class TitanSchoolsClient {
       );
     }
 
-    this.debug = config.debug === true ? true : false;
+    this.debug = config.debug === true;
 
     this.requestParams = {
       buildingId: config.buildingId,
-      districtId: config.districtId
+      districtId: config.districtId,
     };
 
     this.recipeCategoriesToInclude = config.recipeCategoriesToInclude ?? [
       "Main Entree", // Maybe deprecated?
       "Entrees",
-      "Grain"
+      "Grain",
       // , "Fruit"
       // , "Vegetable"
       // , "Milk"
@@ -35,8 +35,8 @@ class TitanSchoolsClient {
     ];
 
     this.client = axios.create({
-      baseURL: "https://family.titank12.com/api/",
-      timeout: 30000
+      baseURL: "https://api.linqconnect.com/api/",
+      timeout: 30000,
     });
   }
 
@@ -85,7 +85,7 @@ class TitanSchoolsClient {
       ...this.requestParams,
       // If no startDate was provided, use today's date
       // API requires date to be formatted as: m-d-Y (i.e. 12-5-2021)
-      startDate: this.formatDate(startDate ?? new Date())
+      startDate: this.formatDate(startDate ?? new Date()),
     };
 
     if (this.debug) {
@@ -100,7 +100,7 @@ class TitanSchoolsClient {
         console.debug(
           `Sending API request: ${JSON.stringify({
             url: request.url,
-            params: request.params
+            params: request.params,
           })}`
         );
         return request;
@@ -109,7 +109,7 @@ class TitanSchoolsClient {
 
     try {
       const axiosResponse = await this.client.get("/FamilyMenu", {
-        params
+        params,
       });
 
       return this.processData(axiosResponse.data);
@@ -149,6 +149,18 @@ class TitanSchoolsClient {
    * @param Object apiResponse The response body from the TitanSchools API.
    */
   extractMenusByDate(apiResponse) {
+    if (!Object.hasOwnProperty.call(apiResponse, "FamilyMenuSessions")) {
+      if (this.debug) {
+        console.log(
+          `TitanSchools API response did not contain the expected data: ${apiResponse}`
+        );
+      } else {
+        console.log(
+          `TitanSchools API response did not contain the expected data. Set 'debug: true' in the modules.MMM-TitanSchoolMealMenu section of config.json file for verbose logs`
+        );
+      }
+      return [];
+    }
     const menus = apiResponse.FamilyMenuSessions.map((menuSession) => {
       // The titank12 API has several possible values for the ServingSession,
       // including "Breakfast", "Lunch", "Seamless Summer Lunch", "Seamless Summer Breakfast".
@@ -162,12 +174,23 @@ class TitanSchoolsClient {
           // intentionally filtered out.
           const recipesToLog = {
             all: [],
-            filteredOut: []
+            filteredOut: [],
           };
 
-          const recipeCategories = menuForThisDate.RecipeCategories.filter(
-            (recipeCategory) => {
-              recipesToLog.all.push(recipeCategory.CategoryName);
+          if (!menuForThisDate.MenuMeals[0]?.RecipeCategories[0]?.Recipes[0]) {
+            if (this.debug) {
+              console.debug(
+                `No meal data was found in the API response for ${menuForThisDate.Date}. Expected to find MenuMeals[].RecipeCategories[].Recipes, but got: ${menuForThisDate}`
+              );
+            }
+            return [];
+          }
+
+          const recipeCategories = menuForThisDate.MenuMeals.map((mealLine) => {
+            return mealLine.RecipeCategories.filter((recipeCategory) => {
+              if (!recipesToLog.all.includes(recipeCategory.CategoryName)) {
+                recipesToLog.all.push(recipeCategory.CategoryName);
+              }
 
               if (
                 this.recipeCategoriesToInclude.includes(
@@ -176,22 +199,30 @@ class TitanSchoolsClient {
               ) {
                 return true;
               } else {
-                recipesToLog.filteredOut.push(recipeCategory.CategoryName);
+                if (
+                  !recipesToLog.filteredOut.includes(
+                    recipeCategory.CategoryName
+                  )
+                ) {
+                  recipesToLog.filteredOut.push(recipeCategory.CategoryName);
+                }
                 return false;
               }
-            }
-          );
+            });
+          }, this).flat();
 
           if (this.debug) {
-            console.debug(
-              `The ${breakfastOrLunch} menu for ${
-                menuForThisDate.Date
-              } contains the following categories: ${recipesToLog.all.join(
+            let message = `The ${breakfastOrLunch} menu for ${
+              menuForThisDate.Date
+            } contains the following categories: ${recipesToLog.all.join(
+              ", "
+            )}`;
+            if (recipesToLog.filteredOut.length > 0) {
+              message += `, but ${recipesToLog.filteredOut.join(
                 ", "
-              )}, but ${recipesToLog.filteredOut.join(
-                ", "
-              )} were filtered out because they're not included in the config.recipeCategoriesToInclude array.`
-            );
+              )} were filtered out because they're not included in the config.recipeCategoriesToInclude array.`;
+            }
+            console.debug(message);
           }
 
           return {
@@ -203,13 +234,14 @@ class TitanSchoolsClient {
                   (recipe) => recipe.RecipeName
                 ).join(" or ");
               })
-              .join(", ")
+              .join(", "),
           };
-        }
+        },
+        this
       );
 
       return menusByDate;
-    });
+    }, this);
 
     if (this.debug) {
       console.debug(
@@ -242,7 +274,7 @@ class TitanSchoolsClient {
           return {
             ...menuByMealTime,
             [menuForThisDate[0].breakfastOrLunch.toLowerCase()]:
-              menuForThisDate[0].menu
+              menuForThisDate[0].menu,
           };
         },
         {}
@@ -252,7 +284,7 @@ class TitanSchoolsClient {
         date: day.date,
         label: day.label,
         breakfast: breakfastAndLunchForThisDay.breakfast,
-        lunch: breakfastAndLunchForThisDay.lunch
+        lunch: breakfastAndLunchForThisDay.lunch,
       };
     });
 
@@ -286,7 +318,7 @@ const upcomingRelativeDates = (numberOfDays = 5) => {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday"
+    "Saturday",
   ];
 
   let weekOfRelativeDates = [];
@@ -310,7 +342,7 @@ const upcomingRelativeDates = (numberOfDays = 5) => {
 
     weekOfRelativeDates.push({
       date,
-      label
+      label,
     });
   }
   return weekOfRelativeDates;
