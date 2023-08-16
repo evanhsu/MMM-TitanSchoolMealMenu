@@ -5,14 +5,15 @@ Module.register("MMM-TitanSchoolMealMenu", {
     numberOfDaysToDisplay: 3,
     size: "medium",
     recipeCategoriesToInclude: [
-      "Main Entree",
+      "Entrees",
       "Grain"
       //   , "Fruit"
       //   , "Vegetable"
       //   , "Milk"
       //   , "Condiment"
       //   , "Extra"
-    ]
+    ],
+    debug: false
   },
 
   requiresVersion: "2.1.0", // Required version of MagicMirror
@@ -33,7 +34,8 @@ Module.register("MMM-TitanSchoolMealMenu", {
       buildingId: this.config.buildingId,
       districtId: this.config.districtId,
       recipeCategoriesToInclude: this.config.recipeCategoriesToInclude,
-      instanceName: this.instanceName
+      instanceName: this.instanceName,
+      debug: this.config.debug
     });
 
     // Schedule update timer

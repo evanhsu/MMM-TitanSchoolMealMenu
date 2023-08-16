@@ -53,7 +53,8 @@ module.exports = NodeHelper.create({
       self.titanSchoolsClients[payload.instanceName] = new TitanSchoolsClient({
         buildingId: payload.buildingId,
         districtId: payload.districtId,
-        recipeCategoriesToInclude: payload.recipeCategoriesToInclude
+        recipeCategoriesToInclude: payload.recipeCategoriesToInclude,
+        debug: payload.debug,
       });
       this.sendSocketNotification(
         `TITANSCHOOLS_CLIENT_READY::${payload.instanceName}`
