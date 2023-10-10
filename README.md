@@ -1,6 +1,6 @@
 # MMM-TitanSchoolMealMenu
 
-A module for the MagicMirror framework that retrieves a school meal menu from the Titan Schools API (family.titank12.com)
+A module for the MagicMirror framework that retrieves a school meal menu from the LinqConnect API (api.linqconnect.com). LinqConnect was formerly known as "Titan Schools" (family.titank12.com).
 
 ---
 
@@ -60,14 +60,10 @@ You can also track multiple school menus by listing the module multiple times in
 
 ## Finding your `buildingId` and `districtId`
 
-#### 1. Go to the Titan Schools webpage and search for your school district: https://family.titank12.com/
+#### 1. Go to the LinqConnect webpage and search for your school district: https://linqconnect.com/
 
 ![Search for your school district](./docs/step1.png)
 
-#### 2. Enter your state (or refine with city and state)
+#### 2. Select your school from the dropdown and use your browser's developer tools to inspect the resulting request to the `/FamilyMenu` endpoint. The `districtId` and `buildingId` will be present as query string parameters on this requests.
 
-![Use the search box to search by city/state](./docs/step2.png)
-
-#### 3. Use your browser's developer tools to inspect a request to the `/FamilyMenu` endpoint. The `districtId` and `buildingId` will be present as query string parameters on these requests.
-
-![Use developer tools to inspect a network request](./docs/step3.png)
+![Use developer tools to inspect a network request](./docs/step2.png)
