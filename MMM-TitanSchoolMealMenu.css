@@ -2,7 +2,7 @@
   font-weight: 700;
 }
 
-.MMM-TitanSchoolMealMenu .meal-description {
+.MMM-TitanSchoolMealMenu .breakfast-description, .MMM-TitanSchoolMealMenu .lunch-description {
   font-weight: 300;
 }
 

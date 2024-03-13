@@ -133,7 +133,7 @@ Module.register("MMM-TitanSchoolMealMenu", {
         breakfastMenuRecipes.innerHTML = dayMenu.breakfast ?? "none";
         breakfastMenuRecipes.className = "meal-recipes";
 
-        breakfastMenuList.className = "meal-description";
+        breakfastMenuList.className = "breakfast-description";
         breakfastMenuList.appendChild(breakfastMenuItems);
         breakfastMenuItems.appendChild(breakfastMenuTitle);
         breakfastMenuItems.appendChild(breakfastMenuRecipes);
@@ -150,7 +150,7 @@ Module.register("MMM-TitanSchoolMealMenu", {
         lunchMenuRecipes.innerHTML = dayMenu.lunch ?? "none";
         lunchMenuRecipes.className = "meal-recipes";
 
-        lunchMenuList.className = "meal-description";
+        lunchMenuList.className = "lunch-description";
         lunchMenuList.appendChild(lunchMenuItems);
         lunchMenuItems.appendChild(lunchMenuTitle);
         lunchMenuItems.appendChild(lunchMenuRecipes);
