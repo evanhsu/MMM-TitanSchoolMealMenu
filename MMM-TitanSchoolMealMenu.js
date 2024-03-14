@@ -118,7 +118,11 @@ Module.register("MMM-TitanSchoolMealMenu", {
         const dayListItem = document.createElement("li");
         const dayLabel = document.createElement("span");
         dayLabel.className = "day-label";
-        dayLabel.innerHTML = dayMenu.label;
+        if (dayMenu.label == "Saturday" || dayMenu.label == "Sunday"){
+          dayLabel.innerHTML = "Weekend";
+        } else {
+          dayLabel.innerHTML = dayMenu.label;
+        }
         dayListItem.appendChild(dayLabel);
         meals.appendChild(dayListItem);
 
