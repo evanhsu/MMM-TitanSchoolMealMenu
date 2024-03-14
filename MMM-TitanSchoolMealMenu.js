@@ -13,7 +13,8 @@ Module.register("MMM-TitanSchoolMealMenu", {
       //   , "Condiment"
       //   , "Extra"
     ],
-    debug: false
+    debug: false,
+    showWeekends: true
   },
 
   requiresVersion: "2.1.0", // Required version of MagicMirror
@@ -112,17 +113,17 @@ Module.register("MMM-TitanSchoolMealMenu", {
       this.dataNotification.forEach((dayMenu, index) => {
         if (index >= this.config.numberOfDaysToDisplay) {
           return;
+        } else if (dayMenu.label == "Saturday" && this.config.showWeekends == false) {
+          return;
+        } else if (dayMenu.label == "Sunday" && this.config.showWeekends == false) {
+          return;
         }
 
         // Day list item.
         const dayListItem = document.createElement("li");
         const dayLabel = document.createElement("span");
         dayLabel.className = "day-label";
-        if (dayMenu.label == "Saturday" || dayMenu.label == "Sunday"){
-          dayLabel.innerHTML = "Weekend";
-        } else {
-          dayLabel.innerHTML = dayMenu.label;
-        }
+        dayLabel.innerHTML = dayMenu.label;
         dayListItem.appendChild(dayLabel);
         meals.appendChild(dayListItem);
 
