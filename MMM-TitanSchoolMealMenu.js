@@ -114,10 +114,10 @@ Module.register("MMM-TitanSchoolMealMenu", {
         if (index >= this.config.numberOfDaysToDisplay) {
           return;
         } else if (dayMenu.label == "Saturday" && this.config.showWeekends == false) {
-          //this.config.numberOfDaysToDisplay = this.config.numberOfDaysToDisplay + 1;
+          this.config.numberOfDaysToDisplay = this.config.numberOfDaysToDisplay + 1;
           return;
         } else if (dayMenu.label == "Sunday" && this.config.showWeekends == false) {
-          //this.config.numberOfDaysToDisplay = this.config.numberOfDaysToDisplay + 1;
+          this.config.numberOfDaysToDisplay = this.config.numberOfDaysToDisplay + 1;
           return;
         }
 
