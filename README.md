@@ -20,6 +20,7 @@ Add this to your MagicMirror `config.js`:
             districtId: '93f76ff0-2eb7-eb11-a2c4-e816644282bd',
             updateIntervalMs: 3600000, // Optional: Milliseconds between updates; Default: 3600000 (1 hour)
             numberOfDaysToDisplay: 3, // Optional: 0 - 5; Default: 3
+            showWeekends: true, // Optional: boolean whether to show days labeled "Saturday" or "Sunday"; Default true
             recipeCategoriesToInclude: [
                 "Entrees",
                 "Grain"
