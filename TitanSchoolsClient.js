@@ -310,7 +310,7 @@ class TitanSchoolsClient {
  *   { date: '9-12-2021', label: 'Sunday' }
  * ]
  */
-const upcomingRelativeDates = (numberOfDays = 5) => {
+const upcomingRelativeDates = (numberOfDays = 7) => {
   const dayOfWeek = [
     "Sunday",
     "Monday",
