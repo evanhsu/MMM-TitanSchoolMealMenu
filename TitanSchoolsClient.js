@@ -85,7 +85,7 @@ class TitanSchoolsClient {
       ...this.requestParams,
       // If no startDate was provided, use today's date
       // API requires date to be formatted as: m-d-Y (i.e. 12-5-2021)
-      startDate: this.formatDate(startDate ?? new Date()),
+      startDate: this.formatDate(startDate ?? new Date(Date.now())),
     };
 
     if (this.debug) {
@@ -323,8 +323,8 @@ const upcomingRelativeDates = (numberOfDays = 5) => {
 
   let weekOfRelativeDates = [];
   for (let dayOffset = 0; dayOffset < numberOfDays; dayOffset++) {
-    const now = new Date();
-    let adjustedDate = new Date();
+    const now = new Date(Date.now());
+    let adjustedDate = new Date(Date.now());
     adjustedDate.setDate(now.getDate() + parseInt(dayOffset, 10));
 
     const date = `${
