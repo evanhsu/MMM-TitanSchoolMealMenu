@@ -7,6 +7,14 @@
     "type": "git",
     "url": "git+https://github.com/evanhsu/MMM-TitanSchoolMealMenu.git"
   },
+  "keywords": [
+    "MagicMirror",
+    "MagicMirror²",
+    "breakfast",
+    "lunch",
+    "menu",
+    "school",
+  ],
   "scripts": {
     "test": "jest"
   },
