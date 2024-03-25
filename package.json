@@ -3,6 +3,10 @@
   "version": "0.5.0",
   "description": "A module for the MagicMirror framework that retrieves a school meal menu from the Tital Schools API",
   "main": "MMM-TitanSchoolMealMenu.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanhsu/MMM-TitanSchoolMealMenu.git"
+  },
   "scripts": {
     "test": "jest"
   },
