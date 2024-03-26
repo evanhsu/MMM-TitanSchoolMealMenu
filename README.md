@@ -10,6 +10,7 @@ A module for the MagicMirror framework that retrieves a school meal menu from th
 
 Add this to your MagicMirror `config.js`:
 
+```js
     {
         module: "MMM-TitanSchoolMealMenu",
         position: "top_left",
@@ -32,6 +33,7 @@ Add this to your MagicMirror `config.js`:
             debug: false // Optional: boolean; Default: false; Setting this to true will output verbose logs
         },
     },
+```
 
 You can also track multiple school menus by listing the module multiple times in your `config.js` file (each config will probably have a different `buildingId`/`districtId`):
 
