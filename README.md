@@ -6,6 +6,20 @@ A module for the MagicMirror framework that retrieves a school meal menu from th
 
 ![Screenshot](./docs/screenshot.png)
 
+## Installation
+
+```bash
+cd ~/MagicMirror/modules
+git clone https://github.com/evanhsu/MMM-TitanSchoolMealMenu.git
+```
+
+## Updating
+
+```bash
+cd ~/MagicMirror/modules/MMM-TitanSchoolMealMenu
+git pull
+```
+
 ## Usage
 
 Add this to your MagicMirror `config.js`:
