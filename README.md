@@ -37,6 +37,7 @@ Add this to your MagicMirror `config.js`:
 
 You can also track multiple school menus by listing the module multiple times in your `config.js` file (each config will probably have a different `buildingId`/`districtId`):
 
+```js
     {
         module: "MMM-TitanSchoolMealMenu",
         position: "top_right",
@@ -55,6 +56,7 @@ You can also track multiple school menus by listing the module multiple times in
             districtId: "93f76ff0-2eb7-eb11-a2c4-e816644282bd",
         }
     },
+```
 
 ![Multiple Schools](./docs/multiple-schools.png)
 
