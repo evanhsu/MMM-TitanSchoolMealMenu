@@ -6,10 +6,25 @@ A module for the MagicMirror framework that retrieves a school meal menu from th
 
 ![Screenshot](./docs/screenshot.png)
 
+## Installation
+
+```bash
+cd ~/MagicMirror/modules
+git clone https://github.com/evanhsu/MMM-TitanSchoolMealMenu.git
+```
+
+## Updating
+
+```bash
+cd ~/MagicMirror/modules/MMM-TitanSchoolMealMenu
+git pull
+```
+
 ## Usage
 
 Add this to your MagicMirror `config.js`:
 
+```js
     {
         module: "MMM-TitanSchoolMealMenu",
         position: "top_left",
@@ -32,9 +47,11 @@ Add this to your MagicMirror `config.js`:
             debug: false // Optional: boolean; Default: false; Setting this to true will output verbose logs
         },
     },
+```
 
 You can also track multiple school menus by listing the module multiple times in your `config.js` file (each config will probably have a different `buildingId`/`districtId`):
 
+```js
     {
         module: "MMM-TitanSchoolMealMenu",
         position: "top_right",
@@ -53,6 +70,7 @@ You can also track multiple school menus by listing the module multiple times in
             districtId: "93f76ff0-2eb7-eb11-a2c4-e816644282bd",
         }
     },
+```
 
 ![Multiple Schools](./docs/multiple-schools.png)
 
