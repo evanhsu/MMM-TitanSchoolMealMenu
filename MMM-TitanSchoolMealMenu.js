@@ -13,7 +13,8 @@ Module.register("MMM-TitanSchoolMealMenu", {
       //   , "Condiment"
       //   , "Extra"
     ],
-    debug: false
+    debug: false,
+    showWeekends: true
   },
 
   requiresVersion: "2.1.0", // Required version of MagicMirror
@@ -112,6 +113,18 @@ Module.register("MMM-TitanSchoolMealMenu", {
       this.dataNotification.forEach((dayMenu, index) => {
         if (index >= this.config.numberOfDaysToDisplay) {
           return;
+        } else if (dayMenu.label == "Saturday" && this.config.showWeekends == false) {
+          this.config.numberOfDaysToDisplay = this.config.numberOfDaysToDisplay + 1;
+          return;
+        } else if (dayMenu.label == "Sunday" && this.config.showWeekends == false) {
+          this.config.numberOfDaysToDisplay = this.config.numberOfDaysToDisplay + 1;
+          return;
+        } else if (dayMenu.label == "Today" && !dayMenu.lunch && !dayMenu.breakfast && this.config.showWeekends == false) {
+          this.config.numberOfDaysToDisplay = this.config.numberOfDaysToDisplay + 1;
+          return;
+        } else if (dayMenu.label == "Tomorrow" && !dayMenu.lunch && !dayMenu.breakfast && this.config.showWeekends == false) {
+          this.config.numberOfDaysToDisplay = this.config.numberOfDaysToDisplay + 1;
+          return;
         }
 
         // Day list item.
@@ -133,7 +146,7 @@ Module.register("MMM-TitanSchoolMealMenu", {
         breakfastMenuRecipes.innerHTML = dayMenu.breakfast ?? "none";
         breakfastMenuRecipes.className = "meal-recipes";
 
-        breakfastMenuList.className = "meal-description";
+        breakfastMenuList.className = "breakfast-description";
         breakfastMenuList.appendChild(breakfastMenuItems);
         breakfastMenuItems.appendChild(breakfastMenuTitle);
         breakfastMenuItems.appendChild(breakfastMenuRecipes);
@@ -150,7 +163,7 @@ Module.register("MMM-TitanSchoolMealMenu", {
         lunchMenuRecipes.innerHTML = dayMenu.lunch ?? "none";
         lunchMenuRecipes.className = "meal-recipes";
 
-        lunchMenuList.className = "meal-description";
+        lunchMenuList.className = "lunch-description";
         lunchMenuList.appendChild(lunchMenuItems);
         lunchMenuItems.appendChild(lunchMenuTitle);
         lunchMenuItems.appendChild(lunchMenuRecipes);
