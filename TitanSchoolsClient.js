@@ -1,4 +1,5 @@
 const axios = require("axios").default;
+const moment = require("moment");
 
 /**
  * A _very_ lightweight client for the TitanSchools API.
@@ -23,6 +24,7 @@ class TitanSchoolsClient {
       districtId: config.districtId,
     };
 
+    this.numberOfDaysToDisplay = config.numberOfDaysToDisplay;
     this.recipeCategoriesToInclude = config.recipeCategoriesToInclude ?? [
       "Main Entree", // Maybe deprecated?
       "Entrees",
@@ -48,7 +50,8 @@ class TitanSchoolsClient {
   /**
    * Fetches menu data from the TitanSchools API and formats it as shown below
    *
-   * @param Date startDate (Optional) A Date object that specifies which day the menu should start on
+   * @param Moment startDate (Optional) A Moment object that specifies which day the menu should start on
+   * @param Moment endDate (Optional) A Moment object that specifies which day the menu should end on
    * @throws Error If the TitanSchools API responds with a 400- or 500-level HTTP status
    *
    * @returns An array of meals shaped like this (starting on {startDate} and including {config.numberOfDaysToDisplay} days):
@@ -80,20 +83,22 @@ class TitanSchoolsClient {
    *   }
    * ]
    */
-  async fetchMenu(startDate = null) {
+  async fetchMenu(startDate = null, endDate = null) {
     let params = {
       ...this.requestParams,
       // If no startDate was provided, use today's date
       // API requires date to be formatted as: m-d-Y (i.e. 12-5-2021)
-      startDate: this.formatDate(startDate ?? new Date(Date.now())),
+      startDate: this.formatDate(startDate ?? moment()),
+      endDate: this.formatDate(endDate ?? moment().add(7, "days"))
     };
 
     if (this.debug) {
       if (startDate === null) {
         console.debug("Using today as startDate");
       } else {
-        console.debug(`Using ${startDate} as startDate`);
+        console.debug(`Using ${startDate.format("MM-DD-YYYY")} as startDate`);
       }
+      console.debug(`Using ${endDate.format("MM-DD-YYYY")} as endDate`);
 
       // Log the outbound API request
       this.client.interceptors.request.use((request) => {
@@ -132,13 +137,11 @@ class TitanSchoolsClient {
 
   /**
    *
-   * @param Date dateObject A Date object
+   * @param Moment dateObject A moment object
    * @returns string A date string formatted as m-d-Y (1-9-2023)
    */
   formatDate(dateObject) {
-    return `${
-      dateObject.getMonth() + 1 // javascript month is 0-indexed :facepalm:
-    }-${dateObject.getDate()}-${dateObject.getFullYear()}`;
+    return `${dateObject.format("MM-DD-YYYY")}`
   }
 
   /**
@@ -192,8 +195,8 @@ class TitanSchoolsClient {
                 recipesToLog.all.push(recipeCategory.CategoryName);
               }
 
-              if (
-                this.recipeCategoriesToInclude.includes(
+              if (this.recipeCategoriesToInclude.length === 0
+                || this.recipeCategoriesToInclude.includes(
                   recipeCategory.CategoryName
                 )
               ) {
@@ -257,7 +260,7 @@ class TitanSchoolsClient {
   processData(data) {
     const menus = this.extractMenusByDate(data);
 
-    const upcomingMenuByDate = upcomingRelativeDates().map((day) => {
+    const upcomingMenuByDate = upcomingRelativeDates(this.numberOfDaysToDisplay).map((day) => {
       // day = { date: '9-6-2021', label: 'Today' }; // Possible labels: 'Today', 'Tomorrow', or a day of the week
       const breakfastAndLunchForThisDay = menus.reduce(
         (menuByMealTime, menu) => {
@@ -332,7 +335,9 @@ const upcomingRelativeDates = (numberOfDays = 5) => {
     }-${adjustedDate.getDate()}-${adjustedDate.getFullYear()}`;
 
     let label = "";
-    if (dayOffset === 0) {
+    if (dayOffset === -1) {
+      label = "Yesterday";
+    } else if (dayOffset === 0) {
       label = "Today";
     } else if (dayOffset === 1) {
       label = "Tomorrow";

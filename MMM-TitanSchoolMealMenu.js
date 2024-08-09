@@ -4,6 +4,11 @@ Module.register("MMM-TitanSchoolMealMenu", {
     updateIntervalMs: 60 * 60 * 1000, // milliseconds
     numberOfDaysToDisplay: 3,
     size: "medium",
+    todayClass: "large",
+    displayCurrentWeek: false,
+    weekStartsOnMonday: false,
+    hideEmptyDays: false,
+    hideEmptyMeals: false,
     recipeCategoriesToInclude: [
       "Entrees",
       "Grain"
@@ -29,13 +34,8 @@ Module.register("MMM-TitanSchoolMealMenu", {
 
     // Send the module config to the node_helper
     this.broadcastConfig({
-      retryDelayMs: this.config.retryDelayMs,
-      updateIntervalMs: this.config.updateIntervalMs,
-      buildingId: this.config.buildingId,
-      districtId: this.config.districtId,
-      recipeCategoriesToInclude: this.config.recipeCategoriesToInclude,
-      instanceName: this.instanceName,
-      debug: this.config.debug
+      ...this.config,
+      instanceName: this.instanceName
     });
 
     // Schedule update timer
@@ -110,12 +110,13 @@ Module.register("MMM-TitanSchoolMealMenu", {
       const meals = document.createElement("ul");
       meals.className = `meal-list ${this.config.size || ""}`;
       this.dataNotification.forEach((dayMenu, index) => {
-        if (index >= this.config.numberOfDaysToDisplay) {
+        if (this.config.hideEmptyDays && !dayMenu.breakfast && !dayMenu.lunch) {
           return;
         }
 
         // Day list item.
         const dayListItem = document.createElement("li");
+        dayListItem.className = dayMenu.label == 'Today' ? this.config.todayClass || "" : "";
         const dayLabel = document.createElement("span");
         dayLabel.className = "day-label";
         dayLabel.innerHTML = dayMenu.label;
@@ -123,38 +124,42 @@ Module.register("MMM-TitanSchoolMealMenu", {
         meals.appendChild(dayListItem);
 
         // Breakfast.
-        const breakfastMenuList = document.createElement("ul");
-        const breakfastMenuItems = document.createElement("li");
-        const breakfastMenuTitle = document.createElement("span");
-        const breakfastMenuRecipes = document.createElement("span");
+        if (dayMenu.breakfast || !this.config.hideEmptyMeals) {
+          const breakfastMenuList = document.createElement("ul");
+          const breakfastMenuItems = document.createElement("li");
+          const breakfastMenuTitle = document.createElement("span");
+          const breakfastMenuRecipes = document.createElement("span");
 
-        breakfastMenuTitle.innerHTML = "Breakfast: ";
-        breakfastMenuTitle.className = "meal-title";
-        breakfastMenuRecipes.innerHTML = dayMenu.breakfast ?? "none";
-        breakfastMenuRecipes.className = "meal-recipes";
+          breakfastMenuTitle.innerHTML = "Breakfast: ";
+          breakfastMenuTitle.className = "meal-title";
+          breakfastMenuRecipes.innerHTML = dayMenu.breakfast ?? "none";
+          breakfastMenuRecipes.className = "meal-recipes";
 
-        breakfastMenuList.className = "meal-description";
-        breakfastMenuList.appendChild(breakfastMenuItems);
-        breakfastMenuItems.appendChild(breakfastMenuTitle);
-        breakfastMenuItems.appendChild(breakfastMenuRecipes);
-        dayListItem.appendChild(breakfastMenuList);
+          breakfastMenuList.className = "meal-description";
+          breakfastMenuList.appendChild(breakfastMenuItems);
+          breakfastMenuItems.appendChild(breakfastMenuTitle);
+          breakfastMenuItems.appendChild(breakfastMenuRecipes);
+          dayListItem.appendChild(breakfastMenuList);
+        }
 
         // Lunch.
-        const lunchMenuList = document.createElement("ul");
-        const lunchMenuItems = document.createElement("li");
-        const lunchMenuTitle = document.createElement("span");
-        const lunchMenuRecipes = document.createElement("span");
+        if (dayMenu.lunch || !this.config.hideEmptyMeals) {
+          const lunchMenuList = document.createElement("ul");
+          const lunchMenuItems = document.createElement("li");
+          const lunchMenuTitle = document.createElement("span");
+          const lunchMenuRecipes = document.createElement("span");
 
-        lunchMenuTitle.innerHTML = "Lunch: ";
-        lunchMenuTitle.className = "meal-title";
-        lunchMenuRecipes.innerHTML = dayMenu.lunch ?? "none";
-        lunchMenuRecipes.className = "meal-recipes";
+          lunchMenuTitle.innerHTML = "Lunch: ";
+          lunchMenuTitle.className = "meal-title";
+          lunchMenuRecipes.innerHTML = dayMenu.lunch ?? "none";
+          lunchMenuRecipes.className = "meal-recipes";
 
-        lunchMenuList.className = "meal-description";
-        lunchMenuList.appendChild(lunchMenuItems);
-        lunchMenuItems.appendChild(lunchMenuTitle);
-        lunchMenuItems.appendChild(lunchMenuRecipes);
-        dayListItem.appendChild(lunchMenuList);
+          lunchMenuList.className = "meal-description";
+          lunchMenuList.appendChild(lunchMenuItems);
+          lunchMenuItems.appendChild(lunchMenuTitle);
+          lunchMenuItems.appendChild(lunchMenuRecipes);
+          dayListItem.appendChild(lunchMenuList);
+        }
       });
 
       wrapperDataNotification.appendChild(meals);

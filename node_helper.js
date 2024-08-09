@@ -1,5 +1,6 @@
 const NodeHelper = require("node_helper");
 const TitanSchoolsClient = require("./TitanSchoolsClient");
+const moment = require("moment");
 
 module.exports = NodeHelper.create({
   // Subclass start method.
@@ -22,9 +23,16 @@ module.exports = NodeHelper.create({
       return;
     }
 
+    const days = this.config.numberOfDaysToDisplay;
+    const startDate = this.config.displayCurrentWeek
+      ? getFirstDayOfWeek(this.config.weekStartsOnMonday)
+      : moment();
+    
+    const endDate = startDate.clone().add(days, "days");
+
     try {
       //   const menu = await this.titanSchoolsClient.fetchMockMenu();
-      const menu = await this.titanSchoolsClients[instanceName].fetchMenu();
+      const menu = await this.titanSchoolsClients[instanceName].fetchMenu(startDate, endDate);
       this.sendSocketNotification(
         `TITANSCHOOLS_FETCH_DATA_SUCCESS::${instanceName}`,
         menu
@@ -34,7 +42,7 @@ module.exports = NodeHelper.create({
         `TITANSCHOOLS_FETCH_DATA_FAILED::${instanceName}`,
         error.message
       );
-      console.error(`Error response from the titanschools API: ${error}`);
+      console.error(`Error response from the TitanSchools API: ${error}`);
     }
 
     return;
@@ -54,8 +62,10 @@ module.exports = NodeHelper.create({
         buildingId: payload.buildingId,
         districtId: payload.districtId,
         recipeCategoriesToInclude: payload.recipeCategoriesToInclude,
+        numberOfDaysToDisplay: payload.numberOfDaysToDisplay,
         debug: payload.debug,
       });
+      this.config = payload;
       this.sendSocketNotification(
         `TITANSCHOOLS_CLIENT_READY::${payload.instanceName}`
       );
@@ -84,4 +94,25 @@ function isObjectEmpty(obj) {
     }
   }
   return propCount === 0;
+}
+
+function getFirstDayOfWeek(weekStartsOnMonday) {
+  const today = moment();
+  let firstDayOfWeek = moment();
+
+  // moment.isoWeekday() returns 1 for Monday, 7 for Sunday.
+  if (weekStartsOnMonday) {
+    const weekStartedDaysAgo = today.isoWeekday() - 1;
+    firstDayOfWeek = today.subtract(weekStartedDaysAgo, "days");
+  } else {
+    const weekday = today.isoWeekday();
+
+    if (weekday === 7) {
+      firstDayOfWeek = today;
+    } else {
+      firstDayOfWeek = today.subtract(weekday, "days");
+    }
+  }
+
+  return firstDayOfWeek.startOf("day");
 }
