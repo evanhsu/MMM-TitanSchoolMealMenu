@@ -1,6 +1,5 @@
 const NodeHelper = require("node_helper");
 const TitanSchoolsClient = require("./TitanSchoolsClient");
-const moment = require("moment");
 
 module.exports = NodeHelper.create({
   // Subclass start method.
@@ -23,12 +22,12 @@ module.exports = NodeHelper.create({
       return;
     }
 
-    const days = this.config.numberOfDaysToDisplay;
     const startDate = this.config.displayCurrentWeek
       ? getFirstDayOfWeek(this.config.weekStartsOnMonday)
-      : moment();
-    
-    const endDate = startDate.clone().add(days, "days");
+      : new Date(Date.now());
+
+    var endDate = new Date(Date.now());
+    endDate.setDate(startDate.getDate() + this.config.numberOfDaysToDisplay);
 
     try {
       //   const menu = await this.titanSchoolsClient.fetchMockMenu();
@@ -97,22 +96,19 @@ function isObjectEmpty(obj) {
 }
 
 function getFirstDayOfWeek(weekStartsOnMonday) {
-  const today = moment();
-  let firstDayOfWeek = moment();
+  const today = new Date();
+  const dayOfWeek = today.getDay(); // 0-6, where 0 is Sunday.
 
-  // moment.isoWeekday() returns 1 for Monday, 7 for Sunday.
+  let firstDayOfWeek = new Date(today);
+
   if (weekStartsOnMonday) {
-    const weekStartedDaysAgo = today.isoWeekday() - 1;
-    firstDayOfWeek = today.subtract(weekStartedDaysAgo, "days");
+    const daysToSubtract = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
+    firstDayOfWeek.setDate(today.getDate() - daysToSubtract);
   } else {
-    const weekday = today.isoWeekday();
-
-    if (weekday === 7) {
-      firstDayOfWeek = today;
-    } else {
-      firstDayOfWeek = today.subtract(weekday, "days");
-    }
+    firstDayOfWeek.setDate(today.getDate() - dayOfWeek);
   }
 
-  return firstDayOfWeek.startOf("day");
+  firstDayOfWeek.setHours(0, 0, 0, 0);  // Set time to start of day.
+
+  return firstDayOfWeek;
 }

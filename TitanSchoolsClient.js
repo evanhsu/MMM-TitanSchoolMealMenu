@@ -1,5 +1,4 @@
 const axios = require("axios").default;
-const moment = require("moment");
 
 /**
  * A _very_ lightweight client for the TitanSchools API.
@@ -50,8 +49,8 @@ class TitanSchoolsClient {
   /**
    * Fetches menu data from the TitanSchools API and formats it as shown below
    *
-   * @param Moment startDate (Optional) A Moment object that specifies which day the menu should start on
-   * @param Moment endDate (Optional) A Moment object that specifies which day the menu should end on
+   * @param Date startDate A Date object that specifies which day the menu should start on
+   * @param Date endDate A Date object that specifies which day the menu should end on
    * @throws Error If the TitanSchools API responds with a 400- or 500-level HTTP status
    *
    * @returns An array of meals shaped like this (starting on {startDate} and including {config.numberOfDaysToDisplay} days):
@@ -83,22 +82,16 @@ class TitanSchoolsClient {
    *   }
    * ]
    */
-  async fetchMenu(startDate = null, endDate = null) {
+  async fetchMenu(startDate, endDate) {
     let params = {
       ...this.requestParams,
-      // If no startDate was provided, use today's date
-      // API requires date to be formatted as: m-d-Y (i.e. 12-5-2021)
-      startDate: this.formatDate(startDate ?? moment()),
-      endDate: this.formatDate(endDate ?? moment().add(7, "days"))
+      // API requires dates to be formatted as: m-d-Y (i.e. 12-5-2021)
+      startDate: this.formatDate(startDate),
+      endDate: this.formatDate(endDate)
     };
 
     if (this.debug) {
-      if (startDate === null) {
-        console.debug("Using today as startDate");
-      } else {
-        console.debug(`Using ${startDate.format("MM-DD-YYYY")} as startDate`);
-      }
-      console.debug(`Using ${endDate.format("MM-DD-YYYY")} as endDate`);
+      console.debug(`Using ${params.startDate} as startDate, ${params.endDate} as endDate`);
 
       // Log the outbound API request
       this.client.interceptors.request.use((request) => {
@@ -137,11 +130,13 @@ class TitanSchoolsClient {
 
   /**
    *
-   * @param Moment dateObject A moment object
+   * @param Date dateObject A Date object
    * @returns string A date string formatted as m-d-Y (1-9-2023)
    */
   formatDate(dateObject) {
-    return `${dateObject.format("MM-DD-YYYY")}`
+    return `${
+      dateObject.getMonth() + 1 // javascript month is 0-indexed :facepalm:
+    }-${dateObject.getDate()}-${dateObject.getFullYear()}`;
   }
 
   /**
