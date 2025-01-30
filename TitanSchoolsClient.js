@@ -23,6 +23,7 @@ class TitanSchoolsClient {
       districtId: config.districtId,
     };
 
+    this.numberOfDaysToDisplay = config.numberOfDaysToDisplay;
     this.recipeCategoriesToInclude = config.recipeCategoriesToInclude ?? [
       "Main Entree", // Maybe deprecated?
       "Entrees",
@@ -48,7 +49,8 @@ class TitanSchoolsClient {
   /**
    * Fetches menu data from the TitanSchools API and formats it as shown below
    *
-   * @param Date startDate (Optional) A Date object that specifies which day the menu should start on
+   * @param Date startDate A Date object that specifies which day the menu should start on
+   * @param Date endDate A Date object that specifies which day the menu should end on
    * @throws Error If the TitanSchools API responds with a 400- or 500-level HTTP status
    *
    * @returns An array of meals shaped like this (starting on {startDate} and including {config.numberOfDaysToDisplay} days):
@@ -80,20 +82,16 @@ class TitanSchoolsClient {
    *   }
    * ]
    */
-  async fetchMenu(startDate = null) {
+  async fetchMenu(startDate, endDate) {
     let params = {
       ...this.requestParams,
-      // If no startDate was provided, use today's date
-      // API requires date to be formatted as: m-d-Y (i.e. 12-5-2021)
-      startDate: this.formatDate(startDate ?? new Date(Date.now())),
+      // API requires dates to be formatted as: m-d-Y (i.e. 12-5-2021)
+      startDate: this.formatDate(startDate),
+      endDate: this.formatDate(endDate)
     };
 
     if (this.debug) {
-      if (startDate === null) {
-        console.debug("Using today as startDate");
-      } else {
-        console.debug(`Using ${startDate} as startDate`);
-      }
+      console.debug(`Using ${params.startDate} as startDate, ${params.endDate} as endDate`);
 
       // Log the outbound API request
       this.client.interceptors.request.use((request) => {
@@ -192,8 +190,8 @@ class TitanSchoolsClient {
                 recipesToLog.all.push(recipeCategory.CategoryName);
               }
 
-              if (
-                this.recipeCategoriesToInclude.includes(
+              if (this.recipeCategoriesToInclude.length === 0
+                || this.recipeCategoriesToInclude.includes(
                   recipeCategory.CategoryName
                 )
               ) {
@@ -257,7 +255,7 @@ class TitanSchoolsClient {
   processData(data) {
     const menus = this.extractMenusByDate(data);
 
-    const upcomingMenuByDate = upcomingRelativeDates().map((day) => {
+    const upcomingMenuByDate = upcomingRelativeDates(this.numberOfDaysToDisplay).map((day) => {
       // day = { date: '9-6-2021', label: 'Today' }; // Possible labels: 'Today', 'Tomorrow', or a day of the week
       const breakfastAndLunchForThisDay = menus.reduce(
         (menuByMealTime, menu) => {
@@ -332,7 +330,9 @@ const upcomingRelativeDates = (numberOfDays = 5) => {
     }-${adjustedDate.getDate()}-${adjustedDate.getFullYear()}`;
 
     let label = "";
-    if (dayOffset === 0) {
+    if (dayOffset === -1) {
+      label = "Yesterday";
+    } else if (dayOffset === 0) {
       label = "Today";
     } else if (dayOffset === 1) {
       label = "Tomorrow";

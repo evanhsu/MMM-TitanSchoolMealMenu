@@ -22,9 +22,16 @@ module.exports = NodeHelper.create({
       return;
     }
 
+    const startDate = this.config.displayCurrentWeek
+      ? getFirstDayOfWeek(this.config.weekStartsOnMonday)
+      : new Date(Date.now());
+
+    var endDate = new Date(Date.now());
+    endDate.setDate(startDate.getDate() + this.config.numberOfDaysToDisplay);
+
     try {
       //   const menu = await this.titanSchoolsClient.fetchMockMenu();
-      const menu = await this.titanSchoolsClients[instanceName].fetchMenu();
+      const menu = await this.titanSchoolsClients[instanceName].fetchMenu(startDate, endDate);
       this.sendSocketNotification(
         `TITANSCHOOLS_FETCH_DATA_SUCCESS::${instanceName}`,
         menu
@@ -34,7 +41,7 @@ module.exports = NodeHelper.create({
         `TITANSCHOOLS_FETCH_DATA_FAILED::${instanceName}`,
         error.message
       );
-      console.error(`Error response from the titanschools API: ${error}`);
+      console.error(`Error response from the TitanSchools API: ${error}`);
     }
 
     return;
@@ -54,8 +61,10 @@ module.exports = NodeHelper.create({
         buildingId: payload.buildingId,
         districtId: payload.districtId,
         recipeCategoriesToInclude: payload.recipeCategoriesToInclude,
+        numberOfDaysToDisplay: payload.numberOfDaysToDisplay,
         debug: payload.debug,
       });
+      this.config = payload;
       this.sendSocketNotification(
         `TITANSCHOOLS_CLIENT_READY::${payload.instanceName}`
       );
@@ -84,4 +93,22 @@ function isObjectEmpty(obj) {
     }
   }
   return propCount === 0;
+}
+
+function getFirstDayOfWeek(weekStartsOnMonday) {
+  const today = new Date();
+  const dayOfWeek = today.getDay(); // 0-6, where 0 is Sunday.
+
+  let firstDayOfWeek = new Date(today);
+
+  if (weekStartsOnMonday) {
+    const daysToSubtract = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
+    firstDayOfWeek.setDate(today.getDate() - daysToSubtract);
+  } else {
+    firstDayOfWeek.setDate(today.getDate() - dayOfWeek);
+  }
+
+  firstDayOfWeek.setHours(0, 0, 0, 0);  // Set time to start of day.
+
+  return firstDayOfWeek;
 }
