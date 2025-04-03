@@ -291,10 +291,10 @@ class TitanSchoolsClient {
       };
     });
 
-    //console.log(
-    //  `School meal info from titanschools API: ${JSON.stringify(
-    //    upcomingMenuByDate
-    //  )}`
+    console.log(
+      `School meal info from titanschools API: ${JSON.stringify(
+        upcomingMenuByDate
+      )}`
     );
 
     return upcomingMenuByDate;
