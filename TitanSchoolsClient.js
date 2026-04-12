@@ -110,10 +110,15 @@ class TitanSchoolsClient {
     }
 
     try {
-      //const axiosResponse = await this.client.get("/FamilyMenu", {
-      //  params,
-      //});
-      const response = await fetch(`https://api.linqconnect.com/api/FamilyMenu?${new URLSearchParams(params)}`);
+      let url = new URL('https://api.linqconnect.com/api/FamilyMenu');
+      url.search = new URLSearchParams(params).toString();
+      const response = await fetch(url, {
+        method: "GET",
+        headers: {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0",
+        }
+      });
+
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
