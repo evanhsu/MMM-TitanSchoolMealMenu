@@ -51,12 +51,12 @@ module.exports = NodeHelper.create({
   socketNotificationReceived: function (notificationName, payload) {
     var self = this;
 
-    console.log(
-      `TitanSchools node_helper received notification: ${notificationName}`
-    );
+    //console.log(
+    //  `TitanSchools node_helper received notification: ${notificationName}`
+    //);
 
     if (notificationName === "TITANSCHOOLS_SET_CONFIG") {
-      console.log(payload);
+      //console.log(payload);
       self.titanSchoolsClients[payload.instanceName] = new TitanSchoolsClient({
         buildingId: payload.buildingId,
         districtId: payload.districtId,
