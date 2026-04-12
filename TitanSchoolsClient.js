@@ -1,5 +1,3 @@
-const axios = require("axios").default;
-
 /**
  * A _very_ lightweight client for the TitanSchools API.
  */
@@ -34,15 +32,6 @@ class TitanSchoolsClient {
       // , "Condiment"
       // , "Extra"
     ];
-
-    this.client = axios.create({
-      baseURL: "https://api.linqconnect.com/api/",
-      timeout: 30000,
-      headers: {
-         "User-Agent":
-         "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0",
-      },
-    });
   }
 
   async fetchMockMenu() {
@@ -96,25 +85,23 @@ class TitanSchoolsClient {
 
     if (this.debug) {
       console.debug(`Using ${params.startDate} as startDate, ${params.endDate} as endDate`);
-
-      // Log the outbound API request
-      this.client.interceptors.request.use((request) => {
-        console.debug(
-          `Sending API request: ${JSON.stringify({
-            url: request.url,
-            params: request.params,
-          })}`
-        );
-        return request;
-      });
     }
 
     try {
-      const axiosResponse = await this.client.get("/FamilyMenu", {
-        params,
+      let url = new URL('https://api.linqconnect.com/api/FamilyMenu');
+      url.search = new URLSearchParams(params).toString();
+      const response = await fetch(url, {
+        method: "GET",
+        headers: {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0",
+        }
       });
 
-      return this.processData(axiosResponse.data);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+
+      return this.processData(await response.json());
     } catch (error) {
       if (error.response?.status && error.response.status >= 500) {
         throw new Error(
